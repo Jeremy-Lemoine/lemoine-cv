@@ -139,3 +139,26 @@ input {
 	display: flex;
 	flex-flow: row;
 }
+
+span.copy-text {
+	display: inline-block;
+	user-select: none;
+	cursor: pointer;
+	&::after {
+		display: block;
+		content: '';
+		border-bottom: 1px solid var(--rose-2);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform ease-in-out 0.2s;
+	}
+	&:hover {
+		&::after {
+			transform: scaleX(1);
+		}
+	}
+}
+
+.retour-ligne {
+	white-space: pre-line;
+}

@@ -5,6 +5,7 @@ import sectionsList from "./sectionsList";
 import { useTranslation } from "react-i18next";
 import Header from "./Header";
 import LanguageSelector from "./LanguageSelector";
+import { ToastContainer } from "react-toastify";
 
 function Home() {
 	const [selected, setSelected] = useState(0);
@@ -15,6 +16,7 @@ function Home() {
 		<>
 			<LanguageSelector />
 			<Header />
+			<ToastContainer />
 			<br />
 			<ButtonsSelector
 				buttons={sectionsList.map((section) => t(section.name))}
