@@ -1,5 +1,5 @@
-import photoPro from "../../images/photoPro.jpg";
-import CopyText from "../../utils/components/CopyText";
+import photoPro from "../../../images/photoPro.jpg";
+import CopyText from "../../../utils/components/CopyText";
 import description from "./description";
 
 function Informations() {
@@ -8,14 +8,14 @@ function Informations() {
 			<div className='image-container'>
 				<img
 					src={photoPro}
-					width='302px'
-					height='403px'
+					width='242px'
+					height='322px'
 					style={{ borderRadius: "50%", boxShadow: "0 0 15px black" }}
 					alt=''
 				/>
 			</div>
 			<div className='text-container'>
-				<p className='left retour-ligne'>{description}</p>
+				<p className='left retour-ligne' style={{fontSize: 'calc(var(--page-font-size) * 1.05)'}}>{description}</p>
 				<br />
 				<br />
 				<br />

@@ -1,5 +1,5 @@
-import Formation from "./Formation";
-import Informations from "./Informations";
+import Formation from "./formation";
+import Informations from "./informations";
 
 const sectionsList = [
 	{

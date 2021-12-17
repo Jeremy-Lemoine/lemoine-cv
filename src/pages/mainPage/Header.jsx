@@ -9,6 +9,7 @@ export default function Header() {
 				userSelect: "none",
 				padding: "10px 30px",
 				boxShadow: "5px 5px 10px black",
+                maxWidth: '35vw'
 			}}>
 			<p
 				style={{
@@ -16,6 +17,7 @@ export default function Header() {
 					fontSize: "calc(var(--page-font-size) * 1.1)",
 					color: "var(--green-3)",
 					fontWeight: "bold",
+                    marginBottom: '8px',
 					WebkitTextStroke: "1px var(--white)",
 				}}>
 				Jérémy Lemoine Zemmour
