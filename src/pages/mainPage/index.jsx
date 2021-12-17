@@ -14,7 +14,8 @@ function Home() {
 	return (
 		<>
 			<LanguageSelector />
-			<Header /><br />
+			<Header />
+			<br />
 			<ButtonsSelector
 				buttons={sectionsList.map((section) => t(section.name))}
 				selected={selected}
