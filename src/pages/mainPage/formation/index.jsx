@@ -7,6 +7,7 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css";
 
 import imta from "./imta.svg";
+import LPDN from "./LPDN.png";
 
 function Formation() {
 	const Element = useCallback(
@@ -55,9 +56,9 @@ function Formation() {
 					<img
 						src={imta}
 						alt=''
-						width='231px'
-						height='150px'
-						style={{ position: "absolute", top: "calc(50% - 75px)", left: "-265px" }}
+						width='308px'
+						height='200px'
+						style={{ position: "absolute", top: "calc(50% - 100px)", left: "-320px" }}
 					/>
 				}>
 				<p>
@@ -94,8 +95,17 @@ function Formation() {
 				iconBackground='var(--dark-gray)'
 				icon={<FcDiploma2 />}
 				titre='Bac S Euro Spé Maths - Mention Très Bien'
-				link='https://www.imt-atlantique.fr/fr'
-				sousTitre='(Lycée Porte de Normandie - Verneuil-Sur-Avre)'>
+				link='https://www.facebook.com/lyceepdn'
+				sousTitre='(Lycée Porte de Normandie - Verneuil-Sur-Avre)'
+				image={
+					<img
+						src={LPDN}
+						alt=""
+						width="180px"
+						height="44.6px"
+						style={{ position: "absolute", top: "calc(50% - 22.3px)", left: "-270px" }}
+					/>
+				}>
 				<p>
 					Baccalauréat Scientifique Spécialité Mathématiques
 					<br /> Mention Européenne obtenu avec Mention Très Bien
