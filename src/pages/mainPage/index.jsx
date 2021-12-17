@@ -22,7 +22,9 @@ function Home() {
 				setSelected={setSelected}
 				style={{ marginBottom: "30px" }}
 			/>
-			<FadeProps>{selected !== null && sectionsList[selected].component}</FadeProps>
+			<FadeProps>
+				{selected !== null ? sectionsList[selected].component : <>Veuillez choisir une section.</>}
+			</FadeProps>
 		</>
 	);
 }

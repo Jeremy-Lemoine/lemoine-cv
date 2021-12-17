@@ -1,4 +1,4 @@
-function ButtonsSelector({ buttons, selected, setSelected, column = false, styleButton, notNull = false, ...rest }) {
+function ButtonsSelector({ buttons, selected, setSelected, column = false, styleButton = undefined, notNull = false, ...rest }) {
 	return (
 		<div className={`button-selector-div${column ? " column" : ""}`} {...rest}>
 			{buttons.map((text) => {
