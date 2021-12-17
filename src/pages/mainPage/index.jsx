@@ -9,7 +9,7 @@ import Header from "./Header";
 import LanguageSelector from "./LanguageSelector";
 
 function Home() {
-	const [selected, setSelected] = useState(0);
+	const [selected, setSelected] = useState(1);
 
 	const { t } = useTranslation();
 

@@ -196,3 +196,20 @@ button {
 		}
 	}
 }
+
+.timeline {
+	.vertical-timeline-element-icon {
+		top: calc(50% - 20px);
+		box-shadow: 2px 2px 7px black;
+	}
+	.vertical-timeline-element-content {
+		box-shadow: 2px 2px 7px black;
+	}
+	h3 {
+		color: var(--orange-2);
+	}
+}
+.vertical-timeline::before {
+	box-shadow: 2px 2px 7px black;
+	border-radius: 3px;
+}
