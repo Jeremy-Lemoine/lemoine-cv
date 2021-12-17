@@ -1,0 +1,140 @@
+:root {
+	--green-1: #5edbac;
+	--green-2: #2fbd87;
+	--green-3: #04aa6b;
+	--green-4: #02764a;
+	--green-5: #004128;
+
+	--orange-1: #ffc36e;
+	--orange-2: #ffaf3f;
+	--orange-3: #fc9606;
+	--orange-4: #af6803;
+	--orange-5: #603800;
+
+	--rose-1: #f46a8f;
+	--rose-2: #ec3a6a;
+	--rose-3: #e40541;
+	--rose-4: #9f032d;
+	--rose-5: #570017;
+
+	--dark-gray: #333;
+	--light-dark-gray: rgb(75, 75, 75);
+	--saumon: rgb(255, 204, 204);
+	--white: rgb(220, 255, 210);
+	--page-font-size: calc(10px + 2vmin);
+	--gap-app-navbar: 50px;
+	--coman-font: "Roboto";
+}
+
+body::-webkit-scrollbar {
+	/* Chrome, Safari, Opera, and Firefox */
+	display: none;
+	width: 0px;
+	background: transparent;
+}
+html {
+	scrollbar-width: none; /* Firefox */
+	height: 100%;
+	width: 100%;
+	font-family: var(--coman-font);
+	body {
+		height: 100%;
+		background-color: #282c34;
+		margin: 0;
+		overflow-x: hidden;
+		text-align: center;
+		font-size: var(--page-font-size);
+		color: var(--white);
+	}
+}
+
+.coman-font {
+	font-family: var(--coman-font);
+}
+
+.app-container {
+	padding-top: 20px;
+	display: inline-block;
+}
+
+input {
+	border: none;
+	outline: var(--green-3) solid 1px;
+	background-color: var(--dark-gray);
+	color: var(--white);
+	border-radius: 5px;
+	padding: 8px;
+	&:focus {
+		outline: var(--green-3) solid 2px;
+	}
+}
+
+.button-selector-div {
+	display: inline-block;
+	border: 2px solid var(--white);
+	&.column {
+		flex-flow: column;
+	}
+	.button-selector {
+		border: none;
+		outline: none;
+		background-color: var(--dark-gray);
+		color: var(--white);
+		cursor: pointer;
+		font-size: var(--page-font-size);
+		height: calc(var(--page-font-size) * 2);
+		padding: 0 16px;
+		transition: color ease-in-out 0.2s;
+		&.selected {
+			color: var(--orange-2);
+		}
+	}
+}
+
+.checkbox {
+	stroke: var(--white);
+	stroke-width: 3px;
+	fill: transparent;
+	transition: stroke ease-in-out 0.3s 1s, fill ease-in-out 0.3s 1s;
+	cursor: pointer;
+	&.checked {
+		stroke: var(--green-1);
+		fill: var(--green-3);
+	}
+}
+
+.informations-container {
+	display: flex;
+	flex-flow: row;
+	font-size: calc(var(--page-font-size) * 0.7);
+	.image-container {
+		padding: 15px;
+		padding-right: 35px;
+	}
+	.text-container {
+		padding: 15px;
+		p {
+			margin: 0;
+		}
+		.orange {
+			color: var(--orange-2);
+		}
+		.green {
+			color: var(--green-2);
+		}
+		.rose {
+			color: var(--rose-2);
+		}
+		.bold {
+			font-weight: bold;
+		}
+		.left {
+			width: 100%;
+			text-align: left;
+		}
+		.inline {
+			display: flex;
+			flex-flow: row;
+		}
+	}
+}
