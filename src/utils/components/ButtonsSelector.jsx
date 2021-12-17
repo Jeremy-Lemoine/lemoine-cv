@@ -1,4 +1,4 @@
-function ButtonsSelector({ buttons, selected, setSelected, column = false, ...rest }) {
+function ButtonsSelector({ buttons, selected, setSelected, column = false, styleButton, notNull = false, ...rest }) {
 	return (
 		<div className={`button-selector-div${column ? ' column': ''}`} {...rest}>
 			{buttons.map((text) => {
@@ -7,7 +7,8 @@ function ButtonsSelector({ buttons, selected, setSelected, column = false, ...re
 					<button
 						key={text}
 						className={selected === i ? "button-selector selected" : "button-selector"}
-						onClick={() => setSelected(selected === i ? null : i)}>
+						onClick={() => setSelected(selected === i ? !notNull ? null : i : i)}
+						style={styleButton}>
 						{text}
 					</button>
 				);

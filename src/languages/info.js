@@ -14,6 +14,7 @@ const info = [
 		path: "./languages/en.json",
 		translationForI18Next: en,
 	},
+	// ALWAYS ADD HERE
 ];
 
 export default info;

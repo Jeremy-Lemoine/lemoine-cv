@@ -25,14 +25,14 @@ function Informations() {
 					Téléphone : <span className='orange'>06 86 83 67 35</span>
 				</p>
 				<br />
-                <p className="left inline">Adresse postale :&nbsp;
+                <div className="left inline">Adresse postale :&nbsp;
                     <div className="orange">
                         <p>4 Rue Du Chemin Blanc</p>
                         <p>28190</p>
                         <p>Landelles</p>
                         <p>France</p>
                     </div>
-                </p>
+                </div>
 			</div>
 		</div>
 	);

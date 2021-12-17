@@ -19,7 +19,7 @@ export default function Header() {
             <p style={{
                 margin: 0,
                 fontSize: 'calc(var(--page-font-size) * 0.9)'
-            }}>Deuxième année de formation d'ingénieur généraliste</p>
+            }}>Deuxième année de formation d'ingénieur généraliste à <span className="rose">IMT Atlantique</span></p>
         </div>
     )
 }

@@ -4,6 +4,7 @@ import ButtonsSelector from "../../utils/components/ButtonsSelector";
 import sectionsList from "./sectionsList";
 import { useTranslation } from "react-i18next";
 import Header from "./Header";
+import LanguageSelector from "./LanguageSelector";
 
 function Home() {
 	const [selected, setSelected] = useState(0);
@@ -12,6 +13,7 @@ function Home() {
 
 	return (
 		<>
+			<LanguageSelector />
 			<Header /><br />
 			<ButtonsSelector
 				buttons={sectionsList.map((section) => t(section.name))}

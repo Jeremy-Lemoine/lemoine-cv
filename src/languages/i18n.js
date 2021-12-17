@@ -11,7 +11,7 @@ const resources = Object.fromEntries(
 
 i18n.use(initReactI18next).init({
 	resources: resources,
-	lng: "en",
+	lng: "fr",
 
 	interpolation: {
 		escapeValue: false,

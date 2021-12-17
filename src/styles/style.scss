@@ -116,25 +116,26 @@ input {
 		p {
 			margin: 0;
 		}
-		.orange {
-			color: var(--orange-2);
-		}
-		.green {
-			color: var(--green-2);
-		}
-		.rose {
-			color: var(--rose-2);
-		}
-		.bold {
-			font-weight: bold;
-		}
-		.left {
-			width: 100%;
-			text-align: left;
-		}
-		.inline {
-			display: flex;
-			flex-flow: row;
-		}
 	}
+}
+
+.orange {
+	color: var(--orange-2);
+}
+.green {
+	color: var(--green-2);
+}
+.rose {
+	color: var(--rose-2);
+}
+.bold {
+	font-weight: bold;
+}
+.left {
+	width: 100%;
+	text-align: left;
+}
+.inline {
+	display: flex;
+	flex-flow: row;
 }
