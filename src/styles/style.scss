@@ -146,7 +146,7 @@ span.copy-text {
 	cursor: pointer;
 	&::after {
 		display: block;
-		content: '';
+		content: "";
 		border-bottom: 1px solid var(--rose-2);
 		transform: scaleX(0);
 		transform-origin: left;
@@ -161,4 +161,29 @@ span.copy-text {
 
 .retour-ligne {
 	white-space: pre-line;
+}
+
+button {
+	font-family: inherit;
+	&.link {
+		appearance: none;
+		color: var(--saumon);
+		font-size: var(--page-font-size);
+		display: inline-block;
+		background: none !important;
+		border: none;
+		padding: 0 !important;
+		text-decoration: none;
+		cursor: pointer;
+		&::after {
+			display: block;
+			content: "";
+			transform: scaleX(0);
+			transition: transform ease-in-out 0.4s;
+			border-bottom: 2px solid var(--orange-2);
+		}
+		&:hover::after {
+			transform: scaleX(1);
+		}
+	}
 }

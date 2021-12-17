@@ -13,7 +13,7 @@ function PageNotFound() {
 	}, [navigate]);
 
 	return (
-		<>
+		<div style={{height: '100vh', display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
 			<MdNotInterested style={{ fontSize: "150px", color: "var(--saumon)" }} />
 			<p>
 				{t("not_found_page_message_before")}
@@ -22,7 +22,7 @@ function PageNotFound() {
 				</button>
 				{t("not_found_page_message_after")}
 			</p>
-		</>
+		</div>
 	);
 }
 

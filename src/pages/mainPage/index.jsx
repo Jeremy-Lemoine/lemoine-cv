@@ -1,11 +1,12 @@
-import FadeProps from "../../utils/components/FadeProps";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { ToastContainer } from "react-toastify";
+
+import FadeProps from "../../utils/components/FadeProps";
 import ButtonsSelector from "../../utils/components/ButtonsSelector";
 import sectionsList from "./sectionsList";
-import { useTranslation } from "react-i18next";
 import Header from "./Header";
 import LanguageSelector from "./LanguageSelector";
-import { ToastContainer } from "react-toastify";
 
 function Home() {
 	const [selected, setSelected] = useState(0);

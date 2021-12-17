@@ -1,6 +1,6 @@
 import photoPro from "../../images/photoPro.jpg";
 import CopyText from "../../utils/components/CopyText";
-import description from './description';
+import description from "./description";
 
 function Informations() {
 	return (
@@ -15,24 +15,28 @@ function Informations() {
 				/>
 			</div>
 			<div className='text-container'>
-				<p className='left retour-ligne'>
-					{description}
-				</p>
+				<p className='left retour-ligne'>{description}</p>
 				<br />
 				<br />
 				<br />
 				<br />
 				<p className='left'>
-					Adresse mail : <CopyText className='orange' copiedText="Adresse mail copiée">jeremy.lemoinezemmour@gmail.com</CopyText>
+					Adresse mail :{" "}
+					<CopyText className='orange' copiedText='Adresse mail copiée'>
+						jeremy.lemoinezemmour@gmail.com
+					</CopyText>
 				</p>
 				<br />
 				<p className='left'>
-					Téléphone : <CopyText className='orange' copiedText="Numéro de téléphone copié">06 86 83 67 35</CopyText>
+					Téléphone :{" "}
+					<CopyText className='orange' copiedText='Numéro de téléphone copié'>
+						06 86 83 67 35
+					</CopyText>
 				</p>
 				<br />
 				<div className='left inline'>
 					Adresse postale :&nbsp;
-					<CopyText className='orange retour-ligne' copiedText="Adresse postale copiée">
+					<CopyText className='orange retour-ligne' copiedText='Adresse postale copiée'>
 						{"4 Rue Du Chemin Blanc,\n28190,\nLandelles,\nFrance"}
 					</CopyText>
 				</div>
