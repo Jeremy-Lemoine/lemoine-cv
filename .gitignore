@@ -2,4 +2,3 @@ build
 build/*
 .vscode
 .vscode/*
-node_modules
