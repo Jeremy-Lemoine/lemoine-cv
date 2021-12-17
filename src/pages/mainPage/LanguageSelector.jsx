@@ -23,10 +23,11 @@ export default function LanguageSelector() {
             border: 'none'
         }}
         styleButton={{
-            fontSize: "calc(var(--page-font-size) * 0.4)",
+            fontSize: "calc(var(--page-font-size) * 0.5)",
             borderRadius: "20px",
             boxShadow: "0 0 10px black",
-            margin: "10px"
+            margin: "10px",
+            padding: "0 10px"
         }}
         notNull
     />
