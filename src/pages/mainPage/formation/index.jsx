@@ -6,7 +6,6 @@ import { FcDiploma2 } from "react-icons/fc";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import photoPro from "../../../images/photoPro.jpg";
 import imta from "./imta.svg";
 
 function Formation() {

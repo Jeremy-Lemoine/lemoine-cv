@@ -1,4 +1,4 @@
-import photoPro from "../../../images/photoPro.jpg";
+import photoPro from "./photoPro.jpg";
 import CopyText from "../../../utils/components/CopyText";
 import description from "./description";
 
