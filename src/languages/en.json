@@ -3,5 +3,6 @@
 	"not_found_page_message_before": "This page does not exist. Go watch back the ",
 	"not_found_page_message_after": ".",
 	"formations_name": "Education",
-	"informations_name": "General"
+	"informations_name": "General",
+	"experience_name": "Experience"
 }

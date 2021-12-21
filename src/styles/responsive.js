@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 class Field {
 	constructor(portrait, paysage) {
 		this.values = {

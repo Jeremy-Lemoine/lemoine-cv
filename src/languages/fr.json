@@ -3,5 +3,6 @@
 	"not_found_page_message_before": "Cette page n'existe pas. Retourner voir le ",
 	"not_found_page_message_after": ".",
 	"formations_name": "Formation",
-	"informations_name": "Général"
+	"informations_name": "Général",
+	"experience_name": "Expérience"
 }

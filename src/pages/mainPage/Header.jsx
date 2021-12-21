@@ -1,6 +1,7 @@
 export default function Header() {
 	return (
 		<div
+			className="bigger-hover"
 			style={{
 				display: "inline-block",
 				marginBottom: "30px",

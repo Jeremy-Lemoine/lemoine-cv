@@ -19,7 +19,7 @@ function CopyText({ children, className = "", overrideText = undefined, copiedTe
 				fontSize: "calc(var(--page-font-size) * 0.7)",
 			},
 		});
-	}, []);
+	}, [copiedText]);
 
 	return (
 		<span

@@ -57,7 +57,7 @@ function Formation() {
 						src={imta}
 						alt=''
 						width='308px'
-						height='200px'
+						height='auto'
 						style={{ position: "absolute", top: "calc(50% - 100px)", left: "-320px" }}
 					/>
 				}>
@@ -102,7 +102,7 @@ function Formation() {
 						src={LPDN}
 						alt=""
 						width="180px"
-						height="44.6px"
+						height="auto"
 						style={{ position: "absolute", top: "calc(50% - 22.3px)", left: "-270px" }}
 					/>
 				}>

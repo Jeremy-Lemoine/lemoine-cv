@@ -203,13 +203,104 @@ button {
 		box-shadow: 2px 2px 7px black;
 	}
 	.vertical-timeline-element-content {
+		@extend .bigger-hover;
 		box-shadow: 2px 2px 7px black;
 	}
 	h3 {
 		color: var(--orange-2);
 	}
+	.vertical-timeline::before {
+		box-shadow: 2px 2px 7px black;
+		border-radius: 3px;
+	}
 }
-.vertical-timeline::before {
+
+.left-to-right-side-button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	filter: brightness(1.25);
+	transition: all ease-in-out 0.2s;
+	font-size: calc(var(--page-font-size) * 3);
+	color: var(--orange-2);
+	padding: 50px;
+	border-radius: 30px;
+	z-index: 1;
+	&.disabled {
+		filter: brightness(0.5);
+	}
+	&:not(.disabled) {
+		cursor: pointer;
+		&:hover {
+			background-color: var(--light-dark-gray);
+		}
+	}
+}
+
+.stage-card {
+	position: relative;
+	width: 700px;
+	display: flex;
+	flex-flow: column;
+	padding: 30px;
+	white-space: pre-line;
+	border-radius: 15px;
 	box-shadow: 2px 2px 7px black;
-	border-radius: 3px;
+	text-align: center;
+	align-items: center;
+	.logo {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	.nom-entreprise {
+		font-size: calc(var(--page-font-size) * 1.3);
+		color: var(--orange-2);
+	}
+	.dates {
+		font-size: calc(var(--page-font-size) * 0.6);
+		font-style: italic;
+		margin-top: 5px;
+		margin-bottom: 30px;
+	}
+	.duree {
+		width: 100%;
+		font-size: calc(var(--page-font-size) * 0.8);
+		text-align: right;
+		margin-top: 30px;
+		margin-bottom: -20px;
+		font-style: italic;
+		color: gray;
+	}
+}
+
+.bigger-hover {
+	transition: transform ease-in-out 0.15s;
+	transform: scale(1);
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+ul {
+	line-height: 1.5em;
+	margin: 5px 0 15px;
+	padding: 0;
+  }
+li.arrow {
+	list-style: none;
+	position: relative;
+	padding: 0 0 0 20px;
+	text-align: left;
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: calc(50% - 2.5px);
+		height: 5px;
+		width: 5px;
+		border: 1px solid var(--orange-2);
+		border-width: 2px 2px 0 0;
+		transform: rotate(45deg);
+	}
 }
