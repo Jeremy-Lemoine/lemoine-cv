@@ -1,3 +1,4 @@
+import Competences from "./competences";
 import Experience from "./experience";
 import Formation from "./formation";
 import Informations from "./informations";
@@ -14,7 +15,11 @@ const sectionsList = [
 	{
 		name: "experience_name",
 		component: <Experience />,
-	}
+	},
+	{
+		name: "competences_name",
+		component: <Competences />,
+	},
 ];
 
 export default sectionsList;

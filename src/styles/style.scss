@@ -282,11 +282,13 @@ button {
 		transform: scale(1.05);
 	}
 }
+
 ul {
 	line-height: 1.5em;
 	margin: 5px 0 15px;
 	padding: 0;
-  }
+}
+
 li.arrow {
 	list-style: none;
 	position: relative;
@@ -302,5 +304,122 @@ li.arrow {
 		border: 1px solid var(--orange-2);
 		border-width: 2px 2px 0 0;
 		transform: rotate(45deg);
+	}
+}
+
+.rubrique-selector {
+	margin-bottom: 30px;
+	.bouton-image {
+		@extend .inherited-border-hover;
+		margin: 10px;
+		cursor: pointer;
+		border: 2px solid var(--white);
+		border-radius: 20%;
+		transition: all ease-in-out 0.3s;
+		&.selected {
+			border-color: var(--orange-3);
+		}
+	}
+}
+
+.langues-div {
+	gap: 20px;
+	display: flex;
+	flex-flow: column;
+	.langue-div {
+		display: flex;
+		flex-flow: row;
+		flex-direction: row;
+		align-items: center;
+		.vide {
+			border-style: dashed;
+			border-width: 1px;
+			border-color: gray;
+			margin-inline: 20px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex: 1;
+		}
+		.name {
+			float: left;
+		}
+		.skill {
+			float: right;
+		}
+	}
+}
+
+.techniques-div {
+	display: inline-block;
+	.technique-div {
+		&:not(:first-child) {
+			margin-top: 60px;
+		}
+		display: block;
+		.image {
+			color: var(--orange-3);
+		}
+		.content {
+			margin: 10px;
+		}
+	}
+}
+
+.inherited-border-hover {
+	border-style: solid;
+	&:hover {
+		border-color: var(--green-2);
+	}
+}
+.border-hover {
+	border: 2px solid transparent;
+	@extend .inherited-border-hover;
+}
+
+.langages-programmation-container {
+	display: flex;
+	flex-flow: column;
+	flex: 1;
+	overflow-y: auto;
+	margin-top: -30px;
+	.langages-programmation-div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 35px;
+		.langage-programmation {
+			@extend .border-hover;
+			position: relative;
+			padding: 30px;
+			border-radius: 15px;
+			cursor: default;
+			transition: all ease-in-out 0.2s;
+			.header {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+				.image {
+					color: var(--orange-3);
+				}
+				.titre {
+					font-weight: bold;
+				}
+			}
+			.details {
+				margin: 10px;
+				font-size: x-small;
+				font-style: italic;
+			}
+			.niveau {
+				font-size: small;
+				color: var(--rose-2);
+				white-space: pre-wrap;
+			}
+		}
 	}
 }
