@@ -2,6 +2,7 @@ import Competences from "./competences";
 import Experience from "./experience";
 import Formation from "./formation";
 import Informations from "./informations";
+import Loisirs from "./loisirs";
 
 const sectionsList = [
 	{
@@ -19,6 +20,10 @@ const sectionsList = [
 	{
 		name: "competences_name",
 		component: <Competences />,
+	},
+	{
+		name: "loisirs_name",
+		component: <Loisirs />,
 	},
 ];
 

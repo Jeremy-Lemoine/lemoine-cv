@@ -1,7 +1,3 @@
-import { BsCodeSlash } from "react-icons/bs";
-import { HiOutlineDesktopComputer } from "react-icons/hi";
-import { IoLanguageOutline } from "react-icons/io5";
-
 function BoutonImage({ ImageComponent, index, selected, setSelected }) {
 	return (
 		<ImageComponent
@@ -13,17 +9,20 @@ function BoutonImage({ ImageComponent, index, selected, setSelected }) {
 	);
 }
 
-export default function RubriqueSelector({ selected, setSelected }) {
+export default function RubriqueSelector({ selected, setSelected, components }) {
 	return (
 		<div className='rubrique-selector'>
-			<BoutonImage ImageComponent={IoLanguageOutline} selected={selected} setSelected={setSelected} index={0} />
-			<BoutonImage
-				ImageComponent={HiOutlineDesktopComputer}
-				selected={selected}
-				setSelected={setSelected}
-				index={1}
-			/>
-			<BoutonImage ImageComponent={BsCodeSlash} selected={selected} setSelected={setSelected} index={2} />
+			{components.map(({ index, ImageComponent }) => {
+				return (
+					<BoutonImage
+						key={index}
+						ImageComponent={ImageComponent}
+						selected={selected}
+						setSelected={setSelected}
+						index={index}
+					/>
+				);
+			})}
 		</div>
 	);
 }

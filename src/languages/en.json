@@ -4,5 +4,7 @@
 	"not_found_page_message_after": ".",
 	"formations_name": "Education",
 	"informations_name": "General",
-	"experience_name": "Experience"
+	"experience_name": "Work Experience",
+	"competences_name": "Skills",
+	"loisirs_name": "Hobbies"
 }
