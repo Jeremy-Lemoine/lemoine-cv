@@ -26,14 +26,21 @@
 	--coman-font: "Roboto";
 }
 
-body::-webkit-scrollbar {
-	/* Chrome, Safari, Opera, and Firefox */
-	display: none;
-	width: 0px;
-	background: transparent;
+.no-scrollbar {
+	&::-webkit-scrollbar {
+		/* Chrome, Safari, Opera, and Firefox */
+		display: none;
+		width: 0px;
+		background: transparent;
+	}
+	scrollbar-width: none; /* Firefox */
+}
+
+body {
+	@extend .no-scrollbar;
 }
 html {
-	scrollbar-width: none; /* Firefox */
+	@extend .no-scrollbar;
 	height: 100%;
 	width: 100%;
 	font-family: var(--coman-font);
@@ -381,8 +388,6 @@ li.arrow {
 	display: flex;
 	flex-flow: column;
 	flex: 1;
-	overflow-y: auto;
-	margin-top: -30px;
 	.langages-programmation-div {
 		display: flex;
 		flex-direction: row;
@@ -425,8 +430,6 @@ li.arrow {
 }
 
 .musique-elements-div {
-	overflow: hidden;
-	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

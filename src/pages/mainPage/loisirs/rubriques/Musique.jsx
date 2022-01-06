@@ -1,10 +1,9 @@
-import { forwardRef, useState } from "react";
+import { useState } from "react";
 
 import piano from "../images/piano.jpg";
 import guitare from "../images/guitare.jpg";
 import useWindowDimensions from "../../../../utils/hooks/useWindowDimensions";
-import withScrollbar from "../../../../utils/hooks/withScrollbar";
-import mergeRefs from "../../../../utils/functions/mergeRefs";
+import ScrollbarComponent from "../../../../utils/hooks/withScrollbar";
 
 function Element({ image, children }) {
 	return (
@@ -15,26 +14,27 @@ function Element({ image, children }) {
 	);
 }
 
-const Musique = forwardRef(({onScroll}, ref) => {
+const Musique = () => {
 	const { width: winWidth, height: winHeight } = useWindowDimensions();
 
 	const [computedHeight, computeHeight] = useState("auto");
 
 	return (
-		<div
-			className='musique-elements-div'
-			style={{ width: winWidth * 0.6, height: computedHeight }}
-			ref={mergeRefs(ref, (node) => node && computeHeight(Math.max(winHeight - node.offsetParent.offsetTop - 20, 60)))}
-			onScroll={onScroll}>
-			<Element image={piano}>
-				<span>10 ans de pratique</span>
-				<span>Autodidacte</span>
-			</Element>
-			<Element image={guitare}>
-				<span>Quelques mois de pratique</span>
-			</Element>
-		</div>
+		<ScrollbarComponent
+			width={winWidth * 0.6}
+			height={computedHeight}
+			forRef={(node) => node && computeHeight(Math.max(winHeight - node.offsetParent.offsetTop - 20, 60))}>
+			<div className='musique-elements-div'>
+				<Element image={piano}>
+					<span>10 ans de pratique</span>
+					<span>Autodidacte</span>
+				</Element>
+				<Element image={guitare}>
+					<span>Quelques mois de pratique</span>
+				</Element>
+			</div>
+		</ScrollbarComponent>
 	);
-});
+};
 
-export default withScrollbar(Musique);
+export default Musique;

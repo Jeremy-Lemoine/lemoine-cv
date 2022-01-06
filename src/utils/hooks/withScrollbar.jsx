@@ -29,7 +29,10 @@ function Track({ trackHeight, scrollTop, scrollTopMax, cappedHeight, contentRef,
 					}
 				})();
 				if (contentRef && contentRef.current)
-					contentRef.current.scrollTo({top: (top * scrollTopMax) / (cappedHeight - trackHeight), behavior: 'smooth'});
+					contentRef.current.scrollTo({
+						top: (top * scrollTopMax) / (cappedHeight - trackHeight),
+						behavior: "smooth",
+					});
 				return { top: newTop, y0: y0, top0: top0 };
 			});
 		},
@@ -78,21 +81,23 @@ function Scrollbar({ totalHeight, cappedHeight, scrollTop, scrollTopMax, content
 	}, [cappedHeight, totalHeight]);
 
 	return (
-		<div className='scrollbar'>
-			<Track
-				trackHeight={trackHeight}
-				totalHeight={totalHeight}
-				cappedHeight={cappedHeight}
-				scrollTop={scrollTop}
-				scrollTopMax={scrollTopMax}
-				contentRef={contentRef}
-				setManualScroll={setManualScroll}
-			/>
-		</div>
+		totalHeight - cappedHeight > 4 && (
+			<div className='scrollbar'>
+				<Track
+					trackHeight={trackHeight}
+					totalHeight={totalHeight}
+					cappedHeight={cappedHeight}
+					scrollTop={scrollTop}
+					scrollTopMax={scrollTopMax}
+					contentRef={contentRef}
+					setManualScroll={setManualScroll}
+				/>
+			</div>
+		)
 	);
 }
 
-function WithScrollbarComponent({ Child }) {
+function ScrollbarComponent({ width, height, forRef, children }) {
 	const [totalHeight, setTotalHeight] = useState(null);
 	const [cappedHeight, setCappedHeight] = useState(null);
 	const [scrollTop, setScrollTop] = useState(null);
@@ -103,7 +108,8 @@ function WithScrollbarComponent({ Child }) {
 
 	return (
 		<div className='scrollable'>
-			<Child
+			<div
+				style={{width: width, height: height, overflowY: "auto", scrollbarWidth: "none"}}
 				ref={mergeRefs(
 					(node) =>
 						node &&
@@ -113,15 +119,18 @@ function WithScrollbarComponent({ Child }) {
 							node.scrollTop && setScrollTop(node.scrollTop);
 							node.scrollTopMax && setScrollTopMax(node.scrollTopMax);
 						}, 2),
-					contentRef
+					contentRef,
+					forRef
 				)}
 				onScroll={(e) => {
 					if (!manualScroll) {
 						setScrollTop(e.target.scrollTop);
 						setScrollTopMax(e.target.scrollTopMax);
 					}
-				}}
-			/>
+				}}>
+				{children}
+			</div>
+
 			<Scrollbar
 				totalHeight={totalHeight}
 				cappedHeight={cappedHeight}
@@ -134,6 +143,4 @@ function WithScrollbarComponent({ Child }) {
 	);
 }
 
-export default function withScrollbar(Child) {
-	return () => <WithScrollbarComponent Child={Child} />;
-}
+export default ScrollbarComponent;

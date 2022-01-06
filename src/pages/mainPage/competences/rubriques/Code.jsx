@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SiJavascript, SiJava, SiPython, SiHtml5, SiCss3, SiCsharp, SiOcaml } from "react-icons/si";
 
 import useWindowDimensions from "../../../../utils/hooks/useWindowDimensions";
+import ScrollbarComponent from "../../../../utils/hooks/withScrollbar";
 
 function Langage({
 	Icon = () => {
@@ -29,34 +30,41 @@ export default function Code() {
 	const [computedHeight, computeHeight] = useState("auto");
 
 	return (
-		<div
-			className='langages-programmation-container'
-			style={{ width: winWidth * 0.6, height: computedHeight }}
-			ref={(node) => node && computeHeight(Math.max(winHeight - node.offsetTop - 20, 60))}>
-			<div className='langages-programmation-div'>
-				<Langage Icon={SiJavascript} titre='JavaScript' details='JS - NodeJS - ReactJS' niveau='Coup de cœur' />
-				<Langage Icon={SiJava} titre='Java' niveau='Étudié en profondeur' />
-				<Langage
-					Icon={SiPython}
-					titre='Python'
-					details='Tkinter - Impératif / Objet - Module typing'
-					niveau="Le plus à l'aise"
-				/>
-				<Langage
-					Icon={({ size, className }) => (
-						<div className={className}>
-							<SiHtml5 size={size} />
-							<SiCss3 size={size} />
-						</div>
-					)}
-					titre='HTML / CSS'
-					details='HTML5 - CSS3 - SCSS'
-					niveau='Indispensable'
-				/>
-				<Langage Icon={SiOcaml} titre='OCaml' niveau={"Langage fonctionnel\nApprentissage intéressant"} />
-				<Langage titre='Scripts' details='Batch - Shell' niveau='Bon niveau' />
-				<Langage Icon={SiCsharp} titre='C#' niveau='Quelques bases' />
+		<ScrollbarComponent
+			width={winWidth * 0.6}
+			height={computedHeight}
+			forRef={(node) => node && computeHeight(Math.max(winHeight - node.offsetParent.offsetTop - 20, 60))}>
+			<div className='langages-programmation-container' height={computedHeight}>
+				<div className='langages-programmation-div'>
+					<Langage
+						Icon={SiJavascript}
+						titre='JavaScript'
+						details='JS - NodeJS - ReactJS'
+						niveau='Coup de cœur'
+					/>
+					<Langage Icon={SiJava} titre='Java' niveau='Étudié en profondeur' />
+					<Langage
+						Icon={SiPython}
+						titre='Python'
+						details='Tkinter - Impératif / Objet - Module typing'
+						niveau="Le plus à l'aise"
+					/>
+					<Langage
+						Icon={({ size, className }) => (
+							<div className={className}>
+								<SiHtml5 size={size} />
+								<SiCss3 size={size} />
+							</div>
+						)}
+						titre='HTML / CSS'
+						details='HTML5 - CSS3 - SCSS'
+						niveau='Indispensable'
+					/>
+					<Langage Icon={SiOcaml} titre='OCaml' niveau={"Langage fonctionnel\nApprentissage intéressant"} />
+					<Langage titre='Scripts' details='Batch - Shell' niveau='Bon niveau' />
+					<Langage Icon={SiCsharp} titre='C#' niveau='Quelques bases' />
+				</div>
 			</div>
-		</div>
+		</ScrollbarComponent>
 	);
 }
