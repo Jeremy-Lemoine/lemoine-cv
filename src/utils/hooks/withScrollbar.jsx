@@ -31,7 +31,6 @@ function Track({ trackHeight, scrollTop, scrollTopMax, cappedHeight, contentRef,
 				if (contentRef && contentRef.current)
 					contentRef.current.scrollTo({
 						top: (top * scrollTopMax) / (cappedHeight - trackHeight),
-						behavior: "smooth",
 					});
 				return { top: newTop, y0: y0, top0: top0 };
 			});
@@ -110,8 +109,15 @@ function ScrollbarComponent({ width, height, forRef, children }) {
 		const scrollableElement = document.getElementById('scrollable');
 		const functionToExecute = (e) => {
 			if (!manualScroll) {
-				setScrollTop(e.target.scrollTop);
-				setScrollTopMax(e.target.scrollTopMax);
+				if (e.target.scrollTopMax) {
+					// FOR FIREFOX
+					setScrollTop(e.target.scrollTop);
+					setScrollTopMax(e.target.scrollTopMax);
+				} else {
+					// FOR OTHER NAVIGATORS
+					setScrollTop(e.target.scrollTop);
+					setScrollTopMax(e.target.scrollHeight - e.target.clientHeight);
+				}
 			}
 		};
 		scrollableElement.addEventListener("scroll", functionToExecute);

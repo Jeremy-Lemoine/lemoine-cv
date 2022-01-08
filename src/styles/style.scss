@@ -457,6 +457,9 @@ li.arrow {
 	position: relative;
 	display: flex;
 	flex-flow: row;
+	> div {
+		@extend .no-scrollbar;
+	}
 	.scrollbar {
 		position: absolute;
 		right: -10px;
