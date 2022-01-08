@@ -106,10 +106,23 @@ function ScrollbarComponent({ width, height, forRef, children }) {
 
 	const contentRef = useRef();
 
+	useEffect(() => {
+		const scrollableElement = document.getElementById('scrollable');
+		const functionToExecute = (e) => {
+			if (!manualScroll) {
+				setScrollTop(e.target.scrollTop);
+				setScrollTopMax(e.target.scrollTopMax);
+			}
+		};
+		scrollableElement.addEventListener("scroll", functionToExecute);
+		return () => scrollableElement.removeEventListener("scroll", functionToExecute);
+	})
+
 	return (
 		<div className='scrollable'>
 			<div
 				style={{width: width, height: height, overflowY: "auto", scrollbarWidth: "none"}}
+				id='scrollable'
 				ref={mergeRefs(
 					(node) =>
 						node &&
@@ -121,13 +134,7 @@ function ScrollbarComponent({ width, height, forRef, children }) {
 						}, 2),
 					contentRef,
 					forRef
-				)}
-				onScroll={(e) => {
-					if (!manualScroll) {
-						setScrollTop(e.target.scrollTop);
-						setScrollTopMax(e.target.scrollTopMax);
-					}
-				}}>
+				)}>
 				{children}
 			</div>
 
