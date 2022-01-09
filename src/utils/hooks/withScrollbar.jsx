@@ -106,28 +106,30 @@ function ScrollbarComponent({ width, height, forRef, children }) {
 	const contentRef = useRef();
 
 	useEffect(() => {
-		const scrollableElement = document.getElementById('scrollable');
+		const scrollableElement = document.getElementById("scrollable");
 		const functionToExecute = (e) => {
-			if (!manualScroll) {
-				if (e.target.scrollTopMax) {
-					// FOR FIREFOX
-					setScrollTop(e.target.scrollTop);
-					setScrollTopMax(e.target.scrollTopMax);
-				} else {
-					// FOR OTHER NAVIGATORS
-					setScrollTop(e.target.scrollTop);
-					setScrollTopMax(e.target.scrollHeight - e.target.clientHeight);
+			setTimeout(() => {
+				if (!manualScroll) {
+					if (e.target.scrollTopMax) {
+						// FOR FIREFOX
+						setScrollTop(e.target.scrollTop);
+						setScrollTopMax(e.target.scrollTopMax);
+					} else {
+						// FOR OTHER NAVIGATORS
+						setScrollTop(e.target.scrollTop);
+						setScrollTopMax(e.target.scrollHeight - e.target.clientHeight);
+					}
 				}
-			}
+			}, 10);
 		};
 		scrollableElement.addEventListener("scroll", functionToExecute);
 		return () => scrollableElement.removeEventListener("scroll", functionToExecute);
-	})
+	});
 
 	return (
 		<div className='scrollable'>
 			<div
-				style={{width: width, height: height, overflowY: "auto", scrollbarWidth: "none"}}
+				style={{ width: width, height: height, overflowY: "auto", scrollbarWidth: "none" }}
 				id='scrollable'
 				ref={mergeRefs(
 					(node) =>
