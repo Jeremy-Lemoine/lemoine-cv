@@ -119,6 +119,7 @@ function ScrollbarComponent({ width, height, forRef, children }) {
 						setScrollTop(e.target.scrollTop);
 						setScrollTopMax(e.target.scrollHeight - e.target.clientHeight);
 					}
+					console.log(e);
 				}
 			}, 10);
 		};
