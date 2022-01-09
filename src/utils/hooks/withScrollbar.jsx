@@ -125,7 +125,7 @@ function ScrollbarComponent({ width, height, forRef, children }) {
 		functionToExecute({target: contentRef.current});
 		scrollableElement.addEventListener("scroll", functionToExecute);
 		return () => scrollableElement.removeEventListener("scroll", functionToExecute);
-	});
+	}, [manualScroll]);
 
 	return (
 		<div className='scrollable'>
