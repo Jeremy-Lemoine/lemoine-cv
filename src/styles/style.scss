@@ -64,6 +64,10 @@ html {
 	display: inline-block;
 }
 
+f {
+	color: orange;
+}
+
 input {
 	border: none;
 	outline: var(--green-3) solid 1px;
@@ -435,15 +439,19 @@ li.arrow {
 	align-items: center;
 	.musique-element-div {
 		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 		.image {
 			margin: 30px;
 			@extend .bigger-hover;
+			width: 40%;
 			height: auto;
 			border-radius: 20px;
 			box-shadow: 2px 2px 8px black;
 		}
 		.content {
-			width: 300px;
+			width: 20%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;

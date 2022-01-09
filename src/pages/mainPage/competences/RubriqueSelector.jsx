@@ -1,10 +1,10 @@
-function BoutonImage({ ImageComponent, index, selected, setSelected }) {
+function BoutonImage({ ImageComponent, index, selected, setSelected, mirror }) {
 	return (
 		<ImageComponent
 			className={`bouton-image${selected === index ? " selected" : ""}`}
 			onClick={() => setSelected(index)}
 			size='30px'
-			style={{ padding: "10px" }}
+			style={{ padding: "10px", transform: mirror && "scaleX(-1)" }}
 		/>
 	);
 }
@@ -12,7 +12,7 @@ function BoutonImage({ ImageComponent, index, selected, setSelected }) {
 export default function RubriqueSelector({ selected, setSelected, components }) {
 	return (
 		<div className='rubrique-selector'>
-			{components.map(({ index, ImageComponent }) => {
+			{components.map(({ index, ImageComponent, mirror }) => {
 				return (
 					<BoutonImage
 						key={index}
@@ -20,6 +20,7 @@ export default function RubriqueSelector({ selected, setSelected, components }) 
 						selected={selected}
 						setSelected={setSelected}
 						index={index}
+						mirror={mirror}
 					/>
 				);
 			})}

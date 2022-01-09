@@ -8,7 +8,7 @@ import ScrollbarComponent from "../../../../utils/hooks/withScrollbar";
 function Element({ image, children }) {
 	return (
 		<div className='musique-element-div'>
-			<img className='image' width='400px' src={image} alt='' />
+			<img className='image' src={image} alt='' />
 			<div className='content'>{children}</div>
 		</div>
 	);

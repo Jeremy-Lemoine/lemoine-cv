@@ -14,11 +14,15 @@ import FadeProps from "../../../utils/components/FadeProps";
 export default function Loisirs() {
 	const [selected, setSelected] = useState(null);
 
+	const setSelectedAndDeselect = (index) => {
+		setSelected((selected) => (selected === index ? null : index));
+	};
+
 	return (
 		<>
 			<RubriqueSelector
 				selected={selected}
-				setSelected={setSelected}
+				setSelected={setSelectedAndDeselect}
 				components={[
 					{
 						ImageComponent: IoMusicalNotes,
@@ -35,23 +39,31 @@ export default function Loisirs() {
 					{
 						ImageComponent: GiChessKnight,
 						index: 3,
+						mirror: true,
 					},
+					//TODO: Rollers
 				]}
 			/>
 			<br />
-			<FadeProps>
-				{selected === 0 ? (
-					<Musique />
-				) : selected === 1 ? (
-					<Informatique />
-				) : selected === 2 ? (
-					<Mathematiques />
-				) : selected === 3 ? (
-					<JeuxComplexes />
-				) : (
-					<></>
-				)}
-			</FadeProps>
+			<div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+				<FadeProps>
+					{selected === 0 ? (
+						<Musique />
+					) : selected === 1 ? (
+						<Informatique />
+					) : selected === 2 ? (
+						<Mathematiques />
+					) : selected === 3 ? (
+						<JeuxComplexes />
+					) : (
+						<>
+							Je suis un passionné de musique, d'informatique, et de jeux complexes stratégiques.
+							<br />
+							Clique sur les icônes ci-dessus pour en savoir plus.
+						</>
+					)}
+				</FadeProps>
+			</div>
 		</>
 	);
 }
