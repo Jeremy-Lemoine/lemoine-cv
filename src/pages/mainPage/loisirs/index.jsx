@@ -10,6 +10,23 @@ import JeuxComplexes from "./rubriques/JeuxComplexes";
 import Mathematiques from "./rubriques/Mathematiques";
 import RubriqueSelector from "../competences/RubriqueSelector";
 import FadeProps from "../../../utils/components/FadeProps";
+import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
+import ScrollbarComponent from "../../../utils/hooks/withScrollbar";
+
+const LocalScrollComponent = ({ Component }) => {
+	const { width: winWidth, height: winHeight } = useWindowDimensions();
+
+	const [computedHeight, computeHeight] = useState("auto");
+
+	return (
+		<ScrollbarComponent
+			width={winWidth * 0.6}
+			height={computedHeight}
+			forRef={(node) => node && computeHeight(Math.max(winHeight - node.offsetParent.offsetTop - 20, 60))}>
+			<Component />
+		</ScrollbarComponent>
+	);
+};
 
 export default function Loisirs() {
 	const [selected, setSelected] = useState(null);
@@ -45,25 +62,23 @@ export default function Loisirs() {
 				]}
 			/>
 			<br />
-			<div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-				<FadeProps>
-					{selected === 0 ? (
-						<Musique />
-					) : selected === 1 ? (
-						<Informatique />
-					) : selected === 2 ? (
-						<Mathematiques />
-					) : selected === 3 ? (
-						<JeuxComplexes />
-					) : (
-						<>
-							Je suis un passionné de musique, d'informatique, et de jeux complexes stratégiques.
-							<br />
-							Clique sur les icônes ci-dessus pour en savoir plus.
-						</>
-					)}
-				</FadeProps>
-			</div>
+			<FadeProps>
+				{selected === 0 ? (
+					<LocalScrollComponent Component={Musique} />
+				) : selected === 1 ? (
+					<LocalScrollComponent Component={Informatique} />
+				) : selected === 2 ? (
+					<LocalScrollComponent Component={Mathematiques} />
+				) : selected === 3 ? (
+					<LocalScrollComponent Component={JeuxComplexes} />
+				) : (
+					<>
+						Je suis un passionné de musique, d'informatique, et de jeux complexes stratégiques.
+						<br />
+						Clique sur les icônes ci-dessus pour en savoir plus.
+					</>
+				)}
+			</FadeProps>
 		</>
 	);
 }

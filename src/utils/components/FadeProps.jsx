@@ -97,3 +97,4 @@ class FadeProps extends Component {
 }
 
 export default FadeProps;
+export {DEFAULT_ANIMATION_LENGTH};

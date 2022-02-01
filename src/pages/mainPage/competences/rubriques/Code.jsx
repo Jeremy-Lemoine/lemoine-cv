@@ -34,7 +34,7 @@ export default function Code() {
 			width={winWidth * 0.6}
 			height={computedHeight}
 			forRef={(node) => node && computeHeight(Math.max(winHeight - node.offsetParent.offsetTop - 20, 60))}>
-			<div className='langages-programmation-container' height={computedHeight}>
+			<div className='langages-programmation-container'>
 				<div className='langages-programmation-div'>
 					<Langage
 						Icon={SiJavascript}

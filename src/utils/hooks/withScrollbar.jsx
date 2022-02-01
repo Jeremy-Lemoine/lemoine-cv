@@ -65,7 +65,7 @@ function Track({ trackHeight, scrollTop, scrollTopMax, cappedHeight, contentRef,
 			style={{
 				width: "100%",
 				height: trackHeight && trackHeight !== Infinity ? trackHeight : 0,
-				top: state.top,
+				top: state.top
 			}}
 			onMouseDown={onMouseDown}
 		/>
@@ -73,26 +73,22 @@ function Track({ trackHeight, scrollTop, scrollTopMax, cappedHeight, contentRef,
 }
 
 function Scrollbar({ totalHeight, cappedHeight, scrollTop, scrollTopMax, contentRef, setManualScroll }) {
-	const [trackHeight, setTrackHeight] = useState(null);
-
-	useEffect(() => {
-		setTrackHeight((cappedHeight * cappedHeight) / totalHeight);
+	const computedTrackHeight = useMemo(() => {
+		return (cappedHeight * cappedHeight) / totalHeight;
 	}, [cappedHeight, totalHeight]);
 
 	return (
-		totalHeight - cappedHeight > 4 && (
-			<div className='scrollbar'>
-				<Track
-					trackHeight={trackHeight}
-					totalHeight={totalHeight}
-					cappedHeight={cappedHeight}
-					scrollTop={scrollTop}
-					scrollTopMax={scrollTopMax}
-					contentRef={contentRef}
-					setManualScroll={setManualScroll}
-				/>
-			</div>
-		)
+		<div className='scrollbar' style={{display: computedTrackHeight && totalHeight - computedTrackHeight <= 4 && "none"}}>
+			<Track
+				trackHeight={computedTrackHeight}
+				totalHeight={totalHeight}
+				cappedHeight={cappedHeight}
+				scrollTop={scrollTop}
+				scrollTopMax={scrollTopMax}
+				contentRef={contentRef}
+				setManualScroll={setManualScroll}
+			/>
+		</div>
 	);
 }
 
@@ -122,7 +118,7 @@ function ScrollbarComponent({ width, height, forRef, children }) {
 				}
 			}, 10);
 		};
-		functionToExecute({target: contentRef.current});
+		functionToExecute({ target: contentRef.current });
 		scrollableElement.addEventListener("scroll", functionToExecute);
 		return () => scrollableElement.removeEventListener("scroll", functionToExecute);
 	}, [manualScroll]);
