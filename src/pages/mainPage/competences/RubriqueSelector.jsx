@@ -12,7 +12,7 @@ function BoutonImage({ ImageComponent, index, selected, setSelected, mirror }) {
 export default function RubriqueSelector({ selected, setSelected, components }) {
 	return (
 		<div className='rubrique-selector'>
-			{components.map(({ index, ImageComponent, mirror }) => {
+			{components.map(({ ImageComponent, mirror }, index) => {
 				return (
 					<BoutonImage
 						key={index}

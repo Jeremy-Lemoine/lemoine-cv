@@ -2,7 +2,7 @@ import { IoMusicalNotes } from "react-icons/io5";
 import { AiFillCode } from "react-icons/ai";
 import { FaLessThanEqual } from "react-icons/fa";
 import { GiChessKnight, GiRollerSkate } from "react-icons/gi";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import Musique from "./rubriques/Musique";
 import Informatique from "./rubriques/Informatique";
@@ -13,6 +13,7 @@ import FadeProps from "../../../utils/components/FadeProps";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
 import ScrollbarComponent from "../../../utils/hooks/ScrollbarComponent";
 import Roller from "./rubriques/Roller";
+import WidthAnimatedTextDiv from "../../../utils/components/WidthAnimatedTextDiv";
 
 const LocalScrollComponent = ({ Component }) => {
 	const { width: winWidth, height: winHeight } = useWindowDimensions();
@@ -29,60 +30,74 @@ const LocalScrollComponent = ({ Component }) => {
 	);
 };
 
+const componentsList = [
+	{
+		header: "Musique",
+		ImageComponent: IoMusicalNotes,
+		Component: Musique,
+	},
+	{
+		header: "Informatique",
+		ImageComponent: AiFillCode,
+		Component: Informatique,
+	},
+	{
+		header: "Mathématiques",
+		ImageComponent: FaLessThanEqual,
+		Component: Mathematiques,
+	},
+	{
+		header: "Jeux complexes",
+		ImageComponent: GiChessKnight,
+		mirror: true,
+		Component: JeuxComplexes,
+	},
+	{
+		header: "Roller",
+		ImageComponent: GiRollerSkate,
+		Component: Roller,
+	},
+];
+
+const DEFAULT_HEADER = "Loisirs";
+
 export default function Loisirs() {
 	const [selected, setSelected] = useState(null);
+	const [actualHeader, setActualHeader] = useState(DEFAULT_HEADER);
+
+	const AnimatedHeaderRefForTextChanging = useRef();
+
+	const setHeader = (text) => {
+		setActualHeader((_) => text);
+		if (AnimatedHeaderRefForTextChanging && AnimatedHeaderRefForTextChanging.current) {
+			AnimatedHeaderRefForTextChanging.current.changeText(text);
+		}
+	};
 
 	const setSelectedAndDeselect = (index) => {
-		setSelected((selected) => (selected === index ? null : index));
+		setSelected((selected) => {
+			if (selected === index) {
+				setHeader(DEFAULT_HEADER);
+				return null;
+			} else {
+				setHeader(componentsList[index].header);
+				return index;
+			}
+		});
 	};
 
 	return (
 		<>
-			<RubriqueSelector
-				selected={selected}
-				setSelected={setSelectedAndDeselect}
-				components={[
-					{
-						ImageComponent: IoMusicalNotes,
-						index: 0,
-					},
-					{
-						ImageComponent: AiFillCode,
-						index: 1,
-					},
-					{
-						ImageComponent: FaLessThanEqual,
-						index: 2,
-					},
-					{
-						ImageComponent: GiChessKnight,
-						index: 3,
-						mirror: true,
-					},
-					{
-						ImageComponent: GiRollerSkate,
-						index: 4,
-					},
-					//TODO: Rollers
-				]}
-			/>
-			<br />
-			<FadeProps>
-				{selected === 0 ? (
-					<LocalScrollComponent Component={Musique} />
-				) : selected === 1 ? (
-					<LocalScrollComponent Component={Informatique} />
-				) : selected === 2 ? (
-					<LocalScrollComponent Component={Mathematiques} />
-				) : selected === 3 ? (
-					<LocalScrollComponent Component={JeuxComplexes} />
-				) : selected === 4 ? (
-					<LocalScrollComponent Component={Roller} />
+			<RubriqueSelector selected={selected} setSelected={setSelectedAndDeselect} components={componentsList} />
+			<WidthAnimatedTextDiv ref={AnimatedHeaderRefForTextChanging} animationLength={1000} delayBefore={200}>{actualHeader}</WidthAnimatedTextDiv>
+			<FadeProps animationLength={200} delayBetween={1000}>
+				{selected !== null && selected < componentsList.length ? (
+					<LocalScrollComponent Component={componentsList[selected].Component} />
 				) : (
 					<LocalScrollComponent
 						Component={() => (
 							<>
-								Je suis un passionné de musique, d'informatique, et de jeux complexes stratégiques.
+								Je suis un passionné de musique, d'informatique, et des jeux complexes stratégiques.
 								<br />
 								Clique sur les icônes ci-dessus pour en savoir plus.
 							</>
