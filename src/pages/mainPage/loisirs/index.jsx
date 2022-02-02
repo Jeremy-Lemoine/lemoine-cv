@@ -1,7 +1,7 @@
 import { IoMusicalNotes } from "react-icons/io5";
 import { AiFillCode } from "react-icons/ai";
 import { FaLessThanEqual } from "react-icons/fa";
-import { GiChessKnight } from "react-icons/gi";
+import { GiChessKnight, GiRollerSkate } from "react-icons/gi";
 import { useState } from "react";
 
 import Musique from "./rubriques/Musique";
@@ -11,7 +11,7 @@ import Mathematiques from "./rubriques/Mathematiques";
 import RubriqueSelector from "../competences/RubriqueSelector";
 import FadeProps from "../../../utils/components/FadeProps";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
-import ScrollbarComponent from "../../../utils/hooks/withScrollbar";
+import ScrollbarComponent from "../../../utils/hooks/ScrollbarComponent";
 
 const LocalScrollComponent = ({ Component }) => {
 	const { width: winWidth, height: winHeight } = useWindowDimensions();
@@ -58,6 +58,10 @@ export default function Loisirs() {
 						index: 3,
 						mirror: true,
 					},
+					{
+						ImageComponent: GiRollerSkate,
+						index: 4,
+					},
 					//TODO: Rollers
 				]}
 			/>
@@ -72,11 +76,15 @@ export default function Loisirs() {
 				) : selected === 3 ? (
 					<LocalScrollComponent Component={JeuxComplexes} />
 				) : (
-					<>
-						Je suis un passionné de musique, d'informatique, et de jeux complexes stratégiques.
-						<br />
-						Clique sur les icônes ci-dessus pour en savoir plus.
-					</>
+					<LocalScrollComponent
+						Component={() => (
+							<>
+								Je suis un passionné de musique, d'informatique, et de jeux complexes stratégiques.
+								<br />
+								Clique sur les icônes ci-dessus pour en savoir plus.
+							</>
+						)}
+					/>
 				)}
 			</FadeProps>
 		</>

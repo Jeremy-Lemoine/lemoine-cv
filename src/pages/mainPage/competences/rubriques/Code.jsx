@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SiJavascript, SiJava, SiPython, SiHtml5, SiCss3, SiCsharp, SiOcaml } from "react-icons/si";
 
 import useWindowDimensions from "../../../../utils/hooks/useWindowDimensions";
-import ScrollbarComponent from "../../../../utils/hooks/withScrollbar";
+import ScrollbarComponent from "../../../../utils/hooks/ScrollbarComponent";
 
 function Langage({
 	Icon = () => {
