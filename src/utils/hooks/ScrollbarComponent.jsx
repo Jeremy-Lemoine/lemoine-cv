@@ -65,7 +65,7 @@ function Track({ trackHeight, scrollTop, scrollTopMax, cappedHeight, contentRef,
 			style={{
 				width: "100%",
 				height: trackHeight && trackHeight !== Infinity ? trackHeight : 0,
-				top: state.top
+				top: state.top,
 			}}
 			onMouseDown={onMouseDown}
 		/>
@@ -78,7 +78,9 @@ function Scrollbar({ totalHeight, cappedHeight, scrollTop, scrollTopMax, content
 	}, [cappedHeight, totalHeight]);
 
 	return (
-		<div className='scrollbar' style={{display: computedTrackHeight && totalHeight - computedTrackHeight <= 4 && "none"}}>
+		<div
+			className='scrollbar'
+			style={{ display: computedTrackHeight && totalHeight - computedTrackHeight <= 4 ? "none" : "initial" }}>
 			<Track
 				trackHeight={computedTrackHeight}
 				totalHeight={totalHeight}

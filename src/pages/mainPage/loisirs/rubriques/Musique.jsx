@@ -1,5 +1,4 @@
-import piano from "../images/piano.jpg";
-import guitare from "../images/guitare.jpg";
+import { piano, guitare } from "../../../../images";
 
 function Element({ image, children }) {
 	return (

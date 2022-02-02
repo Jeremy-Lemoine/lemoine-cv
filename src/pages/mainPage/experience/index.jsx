@@ -1,6 +1,6 @@
 import LeftToRightComponents from "../../../utils/components/LeftToRightComponents";
-import banijayLogo from "./banijayLogo.png";
-import lagardereLogo from "./lagardereLogo.png";
+
+import { banijayLogo, lagardereLogo } from "../../../images";
 
 const StageTemplate = ({ nomEntreprise, dates, duree, logo, listeDeFaits }) => {
 	return (

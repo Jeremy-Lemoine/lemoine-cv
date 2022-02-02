@@ -1,4 +1,4 @@
-import photoPro from "./photoPro.jpg";
+import { photoPro } from "../../../images";
 import CopyText from "../../../utils/components/CopyText";
 import description from "./description";
 
@@ -15,7 +15,9 @@ function Informations() {
 				/>
 			</div>
 			<div className='text-container'>
-				<p className='left retour-ligne' style={{fontSize: 'calc(var(--page-font-size) * 1.05)'}}>{description}</p>
+				<p className='left retour-ligne' style={{ fontSize: "calc(var(--page-font-size) * 1.05)" }}>
+					{description}
+				</p>
 				<br />
 				<br />
 				<br />

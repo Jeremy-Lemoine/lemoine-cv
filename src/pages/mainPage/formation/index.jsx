@@ -6,8 +6,7 @@ import { FcDiploma2 } from "react-icons/fc";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import imta from "./imta.svg";
-import LPDN from "./LPDN.png";
+import { imta, LPDN } from "../../../images";
 
 function Formation() {
 	const Element = useCallback(
@@ -100,9 +99,9 @@ function Formation() {
 				image={
 					<img
 						src={LPDN}
-						alt=""
-						width="180px"
-						height="auto"
+						alt=''
+						width='180px'
+						height='auto'
 						style={{ position: "absolute", top: "calc(50% - 22.3px)", left: "-270px" }}
 					/>
 				}>

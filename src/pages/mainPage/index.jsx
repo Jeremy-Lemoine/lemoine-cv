@@ -8,6 +8,8 @@ import sectionsList from "./sectionsList";
 import Header from "./Header";
 import LanguageSelector from "./LanguageSelector";
 
+import LoadImages from "../../images";
+
 function Home() {
 	const [selected, setSelected] = useState(0);
 
@@ -15,6 +17,7 @@ function Home() {
 
 	return (
 		<>
+			<LoadImages /> {/* We load images (not displayed) to avoid loading animations later */}
 			<LanguageSelector />
 			<Header />
 			<ToastContainer />

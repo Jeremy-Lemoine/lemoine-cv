@@ -12,7 +12,6 @@ import { WrapFondu } from "./utils/functions/appTemplates";
 import updateCSS from "./styles/responsive";
 import "./languages/i18n";
 
-
 function Page() {
 	const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
 
@@ -46,7 +45,7 @@ function Page() {
 					path={path}
 					element={
 						<div className='page'>
-							<WrapFondu app={<div className="app-container">{app}</div>} />
+							<WrapFondu app={<div className='app-container'>{app}</div>} />
 						</div>
 					}
 				/>
