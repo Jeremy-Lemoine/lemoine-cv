@@ -8,9 +8,13 @@ import photoPro from "./photoPro.jpg";
 import piano from "./piano.jpg";
 
 export default function LoadImages() {
-	return [piano, guitare, banijayLogo, imta, lagardereLogo, logo, LPDN, photoPro].map((src) => (
-		<img key={src} src={src} style={{ display: "none" }} alt='' />
-	));
+	return (
+		<div className="preloaded-images">
+			{[piano, guitare, banijayLogo, imta, lagardereLogo, logo, LPDN, photoPro].map((src) => (
+				<img key={src} src={src} alt='' />
+			))}
+		</div>
+	);
 }
 
 export { piano, guitare, banijayLogo, imta, lagardereLogo, logo, LPDN, photoPro };
