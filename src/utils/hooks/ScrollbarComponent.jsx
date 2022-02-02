@@ -128,7 +128,7 @@ function ScrollbarComponent({ width, height, forRef, children }) {
 	return (
 		<div className='scrollable'>
 			<div
-				style={{ width: width, height: height, overflowY: "auto", scrollbarWidth: "none" }}
+				style={{ width: width, height: height, overflowY: "auto", scrollbarWidth: "none", padding: "10px" }}
 				id='scrollable'
 				ref={mergeRefs(
 					(node) =>

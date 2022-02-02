@@ -1,7 +1,7 @@
 export default function Informatique() {
 	return (
 		<span>
-			Je découvre <f>régulièrement</f> de <f>nouveaux langages</f> de programmation à travers des <f>miniprojets</f> personnels ou pour
+			Je découvre <gras-orange>régulièrement</gras-orange> de <gras-orange>nouveaux langages</gras-orange> de programmation à travers des <gras-orange>miniprojets</gras-orange> personnels ou pour
 			des proches.
 			<br />
 			<br />

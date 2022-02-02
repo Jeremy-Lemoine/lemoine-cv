@@ -12,6 +12,7 @@ import RubriqueSelector from "../competences/RubriqueSelector";
 import FadeProps from "../../../utils/components/FadeProps";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
 import ScrollbarComponent from "../../../utils/hooks/ScrollbarComponent";
+import Roller from "./rubriques/Roller";
 
 const LocalScrollComponent = ({ Component }) => {
 	const { width: winWidth, height: winHeight } = useWindowDimensions();
@@ -22,7 +23,7 @@ const LocalScrollComponent = ({ Component }) => {
 		<ScrollbarComponent
 			width={winWidth * 0.6}
 			height={computedHeight}
-			forRef={(node) => node && computeHeight(Math.max(winHeight - node.offsetParent.offsetTop - 20, 60))}>
+			forRef={(node) => node && computeHeight(Math.max(winHeight - node.offsetParent.offsetTop - 50, 60))}>
 			<Component />
 		</ScrollbarComponent>
 	);
@@ -75,6 +76,8 @@ export default function Loisirs() {
 					<LocalScrollComponent Component={Mathematiques} />
 				) : selected === 3 ? (
 					<LocalScrollComponent Component={JeuxComplexes} />
+				) : selected === 4 ? (
+					<LocalScrollComponent Component={Roller} />
 				) : (
 					<LocalScrollComponent
 						Component={() => (
