@@ -2,10 +2,13 @@ import LeftToRightComponents from "../../../utils/components/LeftToRightComponen
 
 import { banijayLogo, lagardereLogo } from "../../../images";
 import { useTranslation } from "react-i18next";
+import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
 
 const StageTemplate = ({ nomEntreprise, dates, duree, logo, listeDeFaits }) => {
+	const {width: winWidth} = useWindowDimensions();
+
 	return (
-		<div className='stage-card bigger-hover'>
+		<div className='stage-card bigger-hover' style={{width: winWidth*0.6}}>
 			<span className='nom-entreprise'>{nomEntreprise}</span>
 			<span className='dates'>{dates}</span>
 			<br />

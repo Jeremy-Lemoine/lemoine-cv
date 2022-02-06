@@ -258,14 +258,12 @@ button {
 
 .stage-card {
 	position: relative;
-	width: 700px;
 	display: flex;
 	flex-flow: column;
 	padding: 30px;
 	white-space: pre-line;
 	border-radius: 15px;
 	box-shadow: 2px 2px 7px black;
-	text-align: center;
 	align-items: center;
 	.logo {
 		position: absolute;
@@ -291,6 +289,28 @@ button {
 		font-style: italic;
 		color: gray;
 	}
+	ul {
+		line-height: 1.5em;
+		margin: 5px 0 15px;
+		padding: 0;
+		li.arrow {
+			list-style: none;
+			position: relative;
+			padding: 0 0 0 20px;
+			text-align: left;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 9px; // top: calc(50% - 2.5px) for centered even with multiline text
+				height: 5px;
+				width: 5px;
+				border: 1px solid var(--orange-2);
+				border-width: 2px 2px 0 0;
+				transform: rotate(45deg);
+			}
+		}
+	}
 }
 
 .bigger-hover {
@@ -298,30 +318,6 @@ button {
 	transform: scale(1);
 	&:hover {
 		transform: scale(1.05);
-	}
-}
-
-ul {
-	line-height: 1.5em;
-	margin: 5px 0 15px;
-	padding: 0;
-}
-
-li.arrow {
-	list-style: none;
-	position: relative;
-	padding: 0 0 0 20px;
-	text-align: left;
-	&::before {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: calc(50% - 2.5px);
-		height: 5px;
-		width: 5px;
-		border: 1px solid var(--orange-2);
-		border-width: 2px 2px 0 0;
-		transform: rotate(45deg);
 	}
 }
 

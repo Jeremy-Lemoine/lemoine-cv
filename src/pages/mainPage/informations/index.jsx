@@ -16,7 +16,6 @@ function Informations() {
 		copied_mail,
 		copied_telephone,
 		copied_adresse,
-		linkedin,
 	} = t("informations_page", { returnObjects: true });
 
 	return (
