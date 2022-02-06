@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 
 import { photoPro } from "../../../images";
 import CopyText from "../../../utils/components/CopyText";
-import { espace } from "../../../utils/others/shortcuts";
-import { AiFillLinkedin } from "react-icons/ai";
+import { espace, espaceNoSelector } from "../../../utils/others/shortcuts";
 
 function Informations() {
 	const { t } = useTranslation();
@@ -38,12 +38,19 @@ function Informations() {
 				<br />
 				<br />
 				<br />
-				<p className='left'>
+				<p className='left inline' style={{alignItems: "center"}}>
 					{adresse_mail}
 					{t("espace_avant_ponctuation")}:{espace}
 					<CopyText className='orange' copiedText={copied_mail}>
 						jeremy.lemoinezemmour@gmail.com
 					</CopyText>
+					{espaceNoSelector}
+					{espaceNoSelector}
+					<AiOutlineMail
+						size={20}
+						style={{ cursor: "pointer" }}
+						onClick={() => (window.location = "mailto:jeremy.lemoinezemmour@gmail.com")}
+					/>
 				</p>
 				<br />
 				<p className='left'>
