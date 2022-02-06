@@ -2,8 +2,8 @@
 class Field {
 	constructor(portrait, paysage) {
 		this.values = {
-			portrait: portrait,
-			paysage: paysage,
+			portrait,
+			paysage,
 		};
 	}
 	getValues() {
