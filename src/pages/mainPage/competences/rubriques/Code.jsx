@@ -17,7 +17,7 @@ function Langage({
 	return (
 		<div className='langage-programmation'>
 			<div className='header'>
-				<Icon size='30px' className='image' />
+				<Icon style={{fontSize: '30px'}} className='image' />
 				{espace}{espace}{espace}
 				<span className='titre'>{titre}</span>
 			</div>
@@ -54,8 +54,8 @@ export default function Code() {
 					<Langage
 						Icon={({ size, className }) => (
 							<div className={className}>
-								<SiHtml5 size={size} />
-								<SiCss3 size={size} />
+								<SiHtml5 style={{fontSize: size}} />
+								<SiCss3 style={{fontSize: size}} />
 							</div>
 						)}
 						titre='HTML / CSS'

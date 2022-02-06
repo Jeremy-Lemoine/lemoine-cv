@@ -39,8 +39,7 @@ function Informations() {
 					{espaceNoSelector}
 					{espaceNoSelector}
 					<AiOutlineMail
-						size={20}
-						style={{ cursor: "pointer" }}
+						style={{ cursor: "pointer", fontSize: 20 }}
 						onClick={() => (window.location = "mailto:jeremy.lemoinezemmour@gmail.com")}
 					/>
 				</p>
@@ -78,7 +77,7 @@ function Informations() {
 							}}
 						/>
 						<AiFillLinkedin
-							size='calc(var(--page-font-size) * var(--multiplicateur-icon-font-size))'
+							style={{fontSize: 'calc(var(--page-font-size) * var(--multiplicateur-icon-font-size))'}}
 							color='#0274b3'
 						/>
 					</a>
