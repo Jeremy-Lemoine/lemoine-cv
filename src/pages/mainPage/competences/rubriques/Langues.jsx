@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 function Langue({ languageName, languageSkill }) {
 	return (
 		<div className='langue-div'>
@@ -9,12 +11,16 @@ function Langue({ languageName, languageSkill }) {
 }
 
 export default function Langues() {
+	const { t } = useTranslation();
+
+	const { langues } = t("competences_page", { returnObjects: true });
+
 	return (
 		<div className='langues-div'>
-			<Langue languageName='Français' languageSkill='Langue maternelle' />
-			<Langue languageName='Anglais' languageSkill='Niveau B2' />
-			<Langue languageName='Espagnol' languageSkill='Niveau A2' />
-			<Langue languageName='Japonais' languageSkill="Début d'apprentissage" />
+			<Langue languageName={langues.fr.nom} languageSkill={langues.fr.niveau} />
+			<Langue languageName={langues.en.nom} languageSkill={langues.en.niveau} />
+			<Langue languageName={langues.es.nom} languageSkill={langues.es.niveau} />
+			<Langue languageName={langues.jap.nom} languageSkill={langues.jap.niveau} />
 		</div>
 	);
 }

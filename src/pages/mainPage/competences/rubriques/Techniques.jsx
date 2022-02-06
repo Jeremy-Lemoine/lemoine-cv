@@ -1,5 +1,6 @@
 import { SiMicrosoftoffice } from "react-icons/si";
 import { FaStopwatch20 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 function Technique({ Icon, children }) {
 	return (
@@ -11,13 +12,17 @@ function Technique({ Icon, children }) {
 }
 
 export default function Techniques() {
+	const { t } = useTranslation();
+
+	const { techniques } = t("competences_page", { returnObjects: true });
+
 	return (
 		<div className='techniques-div'>
 			<Technique Icon={SiMicrosoftoffice}>
-				<span>Bonne maîtrise d'Excel</span>
+				<span>{techniques.excel}</span>
 			</Technique>
 			<Technique Icon={FaStopwatch20}>
-				<span>Adaptation rapide aux nouveaux environnements informatiques</span>
+				<span>{techniques.informatique}</span>
 			</Technique>
 		</div>
 	);

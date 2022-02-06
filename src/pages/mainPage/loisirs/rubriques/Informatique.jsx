@@ -1,11 +1,20 @@
+import { useTranslation } from "react-i18next";
+import replace from "react-string-replace";
+
 export default function Informatique() {
+	const { t } = useTranslation();
+
+	const { informatique } = t("loisirs_page", { returnObjects: true });
+
 	return (
 		<span>
-			Je découvre <important-word>régulièrement</important-word> de <important-word>nouveaux langages</important-word> de programmation à travers des <important-word>miniprojets</important-word> personnels ou pour
-			des proches.
-			<br />
-			<br />
-			Je passe une grande partie de mon temps libre à coder ou à apprendre à coder.
+			{replace(
+				replace(informatique.join("\n"), "\n", () => <br />),
+				/\[([a-zA-Z0-9 \u00C0-\u017F]*)\]/g, // \u00C0-\u017F is for accents
+				(match) => (
+					<important-word>{match}</important-word>
+				)
+			)}
 		</span>
 	);
 }

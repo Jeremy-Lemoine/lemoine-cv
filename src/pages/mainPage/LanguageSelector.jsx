@@ -17,19 +17,21 @@ export default function LanguageSelector() {
 			selected={selected}
 			setSelected={setSelected}
 			style={{
-				position: "absolute",
-				left: "20px",
-				top: "20px",
+				position: "fixed",
+				right: "50px",
+				top: "50px",
 				border: "none",
+				zIndex: "2"
 			}}
 			styleButton={{
-				fontSize: "calc(var(--page-font-size) * 0.5)",
+				fontSize: "calc(var(--page-font-size) * 0.8)",
 				borderRadius: "20px",
 				boxShadow: "0 0 10px black",
 				margin: "10px",
-				padding: "0 10px",
+				padding: "5px 15px",
 			}}
 			notNull
+			column
 		/>
 	);
 }

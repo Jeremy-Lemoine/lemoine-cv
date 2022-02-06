@@ -29,7 +29,7 @@ function Home() {
 				style={{ marginBottom: "30px" }}
 			/>
 			<FadeProps>
-				{selected !== null ? sectionsList[selected].component : <>Veuillez choisir une section.</>}
+				{selected !== null ? sectionsList[selected].component : <>{t("index_choose_section")}</>}
 			</FadeProps>
 		</>
 	);

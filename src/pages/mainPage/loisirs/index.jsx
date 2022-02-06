@@ -3,6 +3,8 @@ import { AiFillCode } from "react-icons/ai";
 import { FaLessThanEqual } from "react-icons/fa";
 import { GiChessKnight, GiRollerSkate } from "react-icons/gi";
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import replace from "react-string-replace";
 
 import Musique from "./rubriques/Musique";
 import Informatique from "./rubriques/Informatique";
@@ -65,6 +67,10 @@ export default function Loisirs() {
 	const [selected, setSelected] = useState(null);
 	const [actualHeader, setActualHeader] = useState(DEFAULT_HEADER);
 
+	const { t } = useTranslation();
+
+	const { no_selection_message } = t("loisirs_page", { returnObjects: true });
+
 	const AnimatedHeaderRefForTextChanging = useRef();
 
 	const setHeader = (text) => {
@@ -89,19 +95,15 @@ export default function Loisirs() {
 	return (
 		<>
 			<RubriqueSelector selected={selected} setSelected={setSelectedAndDeselect} components={componentsList} />
-			<WidthAnimatedTextDiv ref={AnimatedHeaderRefForTextChanging} animationLength={1000} delayBefore={200}>{actualHeader}</WidthAnimatedTextDiv>
+			<WidthAnimatedTextDiv ref={AnimatedHeaderRefForTextChanging} animationLength={1000} delayBefore={200}>
+				{actualHeader}
+			</WidthAnimatedTextDiv>
 			<FadeProps animationLength={200} delayBetween={1000}>
 				{selected !== null && selected < componentsList.length ? (
 					<LocalScrollComponent Component={componentsList[selected].Component} />
 				) : (
 					<LocalScrollComponent
-						Component={() => (
-							<>
-								Je suis un passionné de musique, d'informatique, et des jeux complexes stratégiques.
-								<br />
-								Clique sur les icônes ci-dessus pour en savoir plus.
-							</>
-						)}
+						Component={() => replace(no_selection_message.join("\n"), "\n", () => <br />)}
 					/>
 				)}
 			</FadeProps>

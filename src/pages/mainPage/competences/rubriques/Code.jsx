@@ -3,6 +3,7 @@ import { SiJavascript, SiJava, SiPython, SiHtml5, SiCss3, SiCsharp, SiOcaml } fr
 
 import useWindowDimensions from "../../../../utils/hooks/useWindowDimensions";
 import ScrollbarComponent from "../../../../utils/hooks/ScrollbarComponent";
+import { useTranslation } from "react-i18next";
 
 function Langage({
 	Icon = () => {
@@ -29,6 +30,10 @@ export default function Code() {
 
 	const [computedHeight, computeHeight] = useState("auto");
 
+	const { t } = useTranslation();
+
+	const { code } = t("competences_page", { returnObjects: true });
+
 	return (
 		<ScrollbarComponent
 			width={winWidth * 0.6}
@@ -40,15 +45,10 @@ export default function Code() {
 						Icon={SiJavascript}
 						titre='JavaScript'
 						details='JS - NodeJS - ReactJS'
-						niveau='Coup de cœur'
+						niveau={code.javascript.niveau}
 					/>
-					<Langage Icon={SiJava} titre='Java' niveau='Étudié en profondeur' />
-					<Langage
-						Icon={SiPython}
-						titre='Python'
-						details='Tkinter - Impératif / Objet - Module typing'
-						niveau="Le plus à l'aise"
-					/>
+					<Langage Icon={SiJava} titre='Java' niveau={code.java.niveau} />
+					<Langage Icon={SiPython} titre='Python' details={code.python.details} niveau={code.python.niveau} />
 					<Langage
 						Icon={({ size, className }) => (
 							<div className={className}>
@@ -58,11 +58,11 @@ export default function Code() {
 						)}
 						titre='HTML / CSS'
 						details='HTML5 - CSS3 - SCSS'
-						niveau='Indispensable'
+						niveau={code.html_css.niveau}
 					/>
-					<Langage Icon={SiOcaml} titre='OCaml' niveau={"Langage fonctionnel\nApprentissage intéressant"} />
-					<Langage titre='Scripts' details='Batch - Shell' niveau='Bon niveau' />
-					<Langage Icon={SiCsharp} titre='C#' niveau='Quelques bases' />
+					<Langage Icon={SiOcaml} titre='OCaml' niveau={code.ocaml.niveau} />
+					<Langage titre='Scripts' details='Batch - Shell' niveau={code.scripts.niveau} />
+					<Langage Icon={SiCsharp} titre='C#' niveau={code.csharp.niveau} />
 				</div>
 			</div>
 		</ScrollbarComponent>

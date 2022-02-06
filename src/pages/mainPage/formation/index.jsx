@@ -4,11 +4,18 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { FaSchool } from "react-icons/fa";
 import { FcDiploma2 } from "react-icons/fc";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import replace from "react-string-replace";
 import "react-vertical-timeline-component/style.min.css";
 
 import { imta, LPDN } from "../../../images";
+import { espace } from "../../../utils/others/shortcuts";
+import { useTranslation } from "react-i18next";
 
 function Formation() {
+	const { t } = useTranslation();
+
+	const { imt, prepa, lycee } = t("formation_page", { returnObjects: true });
+
 	const Element = useCallback(
 		({ date, children, icon, iconBackground, iconColor, titre, sousTitre, link, image }) => {
 			return (
@@ -19,13 +26,16 @@ function Formation() {
 					iconStyle={{ background: iconBackground, color: iconColor }}
 					icon={icon}>
 					{link ? (
-						<a href={link} style={{ textDecoration: "none" }}>
-							<h3 style={{ marginBottom: 0 }}>
-								<button className='link' style={{ color: "var(--orange-2)" }}>
-									{titre}
-								</button>
-							</h3>
-						</a>
+						<>
+							<a href={link} style={{ textDecoration: "none", display: "inline-block" }}>
+								<h3 style={{ marginBottom: 0 }}>
+									<button className='link' style={{ color: "var(--orange-2)" }}>
+										{titre}
+									</button>
+								</h3>
+							</a>
+							<br />
+						</>
 					) : (
 						<h3 style={{ marginBottom: 0 }}>{titre}</h3>
 					)}
@@ -44,13 +54,13 @@ function Formation() {
 	return (
 		<VerticalTimeline layout='1-column' lineColor='var(--orange-3)' className='timeline'>
 			<Element
-				date="2020 - Ajourd'hui"
+				date={imt.date}
 				iconBackground='var(--dark-gray)'
 				iconColor='#afcb37'
 				icon={<IoSchoolSharp />}
 				titre='IMT Atlantique'
-				link='https://www.imt-atlantique.fr/fr'
-				sousTitre='(Nantes)'
+				link={imt.link}
+				sousTitre={`${imt.lieu}`}
 				image={
 					<img
 						src={imta}
@@ -60,10 +70,7 @@ function Formation() {
 						style={{ position: "absolute", top: "calc(50% - 100px)", left: "-320px" }}
 					/>
 				}>
-				<p>
-					École d'ingénieur généraliste
-					<br /> Spécialité Développement Logiciel
-				</p>
+				<p>{replace(imt.description.join("\n"), "\n", () => <br />)}</p>
 			</Element>
 			<Element
 				date='2018 - 2020'
@@ -78,24 +85,21 @@ function Formation() {
 							alignItems: "center",
 							justifyContent: "center",
 						}}>
-						CPGE MPSI&nbsp;
+						CPGE MPSI{espace}
 						<HiArrowNarrowRight />
-						&nbsp;MP*
+						{espace}MP*
 					</div>
 				}
-				sousTitre='(Lycée Pasteur - Neuilly-Sur-Seine)'>
-				<p>
-					Classe préparatoire aux grandes écoles
-					<br /> pendant 2 ans au Lycée Pasteur à Neuilly-Sur-Seine
-				</p>
+				sousTitre={`(Lycée Pasteur - ${prepa.lieu})`}>
+				<p>{replace(prepa.description.join("\n"), "\n", () => <br />)}</p>
 			</Element>
 			<Element
 				date='2018'
 				iconBackground='var(--dark-gray)'
 				icon={<FcDiploma2 />}
-				titre='Bac S Euro Spé Maths - Mention Très Bien'
+				titre={replace(lycee.titre, "\n", () => <br />)}
 				link='https://www.facebook.com/lyceepdn'
-				sousTitre='(Lycée Porte de Normandie - Verneuil-Sur-Avre)'
+				sousTitre={`(Lycée Porte de Normandie - ${lycee.lieu})`}
 				image={
 					<img
 						src={LPDN}
@@ -105,11 +109,7 @@ function Formation() {
 						style={{ position: "absolute", top: "calc(50% - 22.3px)", left: "-270px" }}
 					/>
 				}>
-				<p>
-					Baccalauréat Scientifique Spécialité Mathématiques
-					<br /> Mention Européenne obtenu avec Mention Très Bien
-					<br /> au Lycée Porte de Normandie de Verneuil-Sur-Avre
-				</p>
+				<p>{replace(lycee.description.join("\n"), "\n", () => <br />)}</p>
 			</Element>
 		</VerticalTimeline>
 	);

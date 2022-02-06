@@ -88,6 +88,7 @@ input {
 	display: inline-block;
 	border: 2px solid var(--white);
 	&.column {
+		display: flex;
 		flex-flow: column;
 	}
 	.button-selector {
@@ -194,10 +195,11 @@ button {
 		color: var(--saumon);
 		font-size: var(--page-font-size);
 		display: inline-block;
-		background: none !important;
 		border: none;
+		background: none;
 		padding: 0 !important;
 		text-decoration: none;
+		font-weight: bold;
 		cursor: pointer;
 		&::after {
 			display: block;
@@ -501,6 +503,17 @@ li.arrow {
 	margin-bottom: 15px;
 	cursor: default;
 	span {
-		color: var(--white)
+		color: var(--white);
 	}
+}
+
+.icon-link {
+	position: relative;
+	appearance: none;
+	display: inline-block;
+	color: var(--white);
+	padding: 0 !important;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
 }

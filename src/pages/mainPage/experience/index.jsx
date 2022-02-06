@@ -1,6 +1,7 @@
 import LeftToRightComponents from "../../../utils/components/LeftToRightComponents";
 
 import { banijayLogo, lagardereLogo } from "../../../images";
+import { useTranslation } from "react-i18next";
 
 const StageTemplate = ({ nomEntreprise, dates, duree, logo, listeDeFaits }) => {
 	return (
@@ -26,32 +27,32 @@ const StageTemplate = ({ nomEntreprise, dates, duree, logo, listeDeFaits }) => {
 };
 
 const StageBanijay = () => {
+	const { t } = useTranslation();
+
+	const { banijay } = t("experience_page", { returnObjects: true });
+
 	return (
 		<StageTemplate
 			nomEntreprise='Banijay France'
-			dates='Juin 2021 - Juillet 2021'
-			listeDeFaits={[
-				"Découverte des infrastructures réseau",
-				"Support informatique et création de scripts (batch, shell, bash)",
-				"Préparation de postes de travail pour les nouveaux arrivants",
-			]}
-			duree='1 mois'
+			dates={banijay.dates}
+			listeDeFaits={banijay.liste_de_faits}
+			duree={banijay.duree}
 			logo={banijayLogo}
 		/>
 	);
 };
 
 const StageLagardere = () => {
+	const { t } = useTranslation();
+
+	const { lagardere } = t("experience_page", { returnObjects: true });
+
 	return (
 		<StageTemplate
 			nomEntreprise='Lagardère Sport'
 			dates='2014'
-			listeDeFaits={[
-				"Découverte des différents métiers présents sur site",
-				"Tâches variées de maintenance (classement, modèles simples sur Excel...)",
-				"Découverte et utilisation de certains outils (Excel, logiciel de Design et Graphisme...)",
-			]}
-			duree='1 semaine'
+			listeDeFaits={lagardere.liste_de_faits}
+			duree={lagardere.duree}
 			logo={lagardereLogo}
 		/>
 	);

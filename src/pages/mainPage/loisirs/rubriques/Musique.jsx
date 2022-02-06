@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { piano, guitare } from "../../../../images";
 
 function Element({ image, children }) {
@@ -10,14 +11,21 @@ function Element({ image, children }) {
 }
 
 const Musique = () => {
+	const { t } = useTranslation();
+
+	const { musique } = t("loisirs_page", { returnObjects: true });
+
 	return (
 		<div className='musique-elements-div'>
 			<Element image={piano}>
-				<span>10 ans de pratique</span>
-				<span>Autodidacte</span>
+				{musique.piano.map((text, index) => (
+					<span key={index}>{text}</span>
+				))}
 			</Element>
 			<Element image={guitare}>
-				<span>Quelques mois de pratique</span>
+				{musique.guitare.map((text, index) => (
+					<span key={index}>{text}</span>
+				))}
 			</Element>
 		</div>
 	);
