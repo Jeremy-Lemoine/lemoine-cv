@@ -3,8 +3,8 @@ function BoutonImage({ ImageComponent, index, selected, setSelected, mirror }) {
 		<ImageComponent
 			className={`bouton-image${selected === index ? " selected" : ""}`}
 			onClick={() => setSelected(index)}
-			size='30px'
-			style={{ padding: "10px", transform: mirror && "scaleX(-1)" }}
+			size='var(--rubrique-selector-icon-size)'
+			style={{ padding: "calc(var(--rubrique-selector-icon-size) / 3)", transform: mirror && "scaleX(-1)" }}
 		/>
 	);
 }

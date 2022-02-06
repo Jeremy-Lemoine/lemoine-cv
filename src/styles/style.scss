@@ -21,9 +21,10 @@
 	--light-dark-gray: rgb(75, 75, 75);
 	--saumon: rgb(255, 204, 204);
 	--white: rgb(220, 255, 210);
-	--page-font-size: calc(10px + 1vmin);
 	--gap-app-navbar: 50px;
 	--coman-font: "Roboto";
+
+	// Constants that are not defined here are defined in the file responsive.js
 }
 
 .no-scrollbar {
@@ -122,21 +123,24 @@ input {
 
 .informations-container {
 	display: flex;
-	flex-flow: row;
-	font-size: calc(var(--page-font-size) * 0.7);
+	flex-flow: var(--informations-container-flex-flow);
 	max-width: 80vw;
 	.image-container {
 		padding: 15px;
 	}
 	.text-container {
-		max-width: 50vw;
 		display: flex;
+		max-width: var(--informations-container-text-container-max-width);
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		padding: 15px;
+		font-size: calc(var(--page-font-size) * 0.7);
 		p {
 			margin: 0;
+		}
+		p.description {
+			font-size: calc(var(--page-font-size) * 1.1);
 		}
 		br {
 			margin-top: 8px;
@@ -216,6 +220,7 @@ button {
 }
 
 .timeline {
+	transform: translateX(100px);
 	.vertical-timeline-element-icon {
 		top: calc(50% - 20px);
 		box-shadow: 2px 2px 7px black;
@@ -337,7 +342,6 @@ button {
 }
 
 .langues-div {
-	gap: 20px;
 	display: flex;
 	flex-flow: column;
 	.langue-div {
@@ -345,6 +349,9 @@ button {
 		flex-flow: row;
 		flex-direction: row;
 		align-items: center;
+		&:not(:first-child) {
+			margin-top: var(--langues-div-gap-between-lines);
+		}
 		.vide {
 			border-style: dashed;
 			border-width: 1px;
@@ -368,7 +375,7 @@ button {
 	display: inline-block;
 	.technique-div {
 		&:not(:first-child) {
-			margin-top: 60px;
+			margin-top: var(--technique-div-gap-between-techniques);
 		}
 		display: block;
 		.image {
@@ -394,6 +401,7 @@ button {
 .langages-programmation-container {
 	display: flex;
 	flex-flow: column;
+	flex-direction: row;
 	flex: 1;
 	.langages-programmation-div {
 		display: flex;
@@ -405,7 +413,7 @@ button {
 		.langage-programmation {
 			@extend .border-hover;
 			position: relative;
-			padding: 30px;
+			padding: var(--langage-programmation-padding);
 			border-radius: 15px;
 			cursor: default;
 			transition: all ease-in-out 0.2s;
@@ -414,21 +422,21 @@ button {
 				flex-direction: row;
 				align-items: center;
 				justify-content: center;
-				gap: 15px;
 				.image {
 					color: var(--orange-3);
 				}
 				.titre {
 					font-weight: bold;
+					font-size: calc(var(--page-font-size) * 1.2);
 				}
 			}
 			.details {
 				margin: 10px;
-				font-size: x-small;
+				font-size: var(--langage-programmation-details-font-size);
 				font-style: italic;
 			}
 			.niveau {
-				font-size: small;
+				font-size: var(--langage-programmation-niveau-font-size);
 				color: var(--rose-2);
 				white-space: pre-wrap;
 			}
@@ -445,21 +453,26 @@ button {
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		&:not(:first-child) {
+			margin-bottom: var(--musique-div-gap-between-instruments);
+		}
 		.image {
 			margin: 30px;
 			@extend .bigger-hover;
-			width: 40%;
+			width: var(--musique-image-width);
 			height: auto;
 			border-radius: 20px;
 			box-shadow: 2px 2px 8px black;
 		}
 		.content {
-			width: 20%;
+			width: var(--musique-content-width);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			gap: 20px;
+			& > *:not(:first-child) {
+				margin-top: 20px;
+			}
 		}
 	}
 }
@@ -468,6 +481,8 @@ button {
 	position: relative;
 	display: flex;
 	flex-flow: row;
+	align-items: center;
+	flex-direction: column;
 	> div {
 		@extend .no-scrollbar;
 	}

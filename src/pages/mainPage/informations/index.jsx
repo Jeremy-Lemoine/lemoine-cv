@@ -25,9 +25,7 @@ function Informations() {
 				/>
 			</div>
 			<div className='text-container'>
-				<p className='left retour-ligne' style={{ fontSize: "calc(var(--page-font-size) * 1.05)" }}>
-					{description}
-				</p>
+				<p className='left retour-ligne description'>{description}</p>
 				<br />
 				<br />
 				<br />
@@ -47,7 +45,7 @@ function Informations() {
 					/>
 				</p>
 				<br />
-				<p className='left'>
+				<p className='left inline'>
 					{telephone}
 					{t("espace_avant_ponctuation")}:{espace}
 					<CopyText className='orange' copiedText={copied_telephone}>
@@ -63,21 +61,26 @@ function Informations() {
 					</CopyText>
 				</div>
 				<br />
+				<br />
+				<br />
 				<div className='left'>
 					<a href='https://www.linkedin.com/in/jérémy-lemoine-zemmour/' className='icon-link'>
 						<div // To get the "in" as white and not transparent
 							className='background-white'
 							style={{
 								position: "absolute",
-								left: "10px",
-								top: "10px",
-								width: "31px",
-								height: "30px",
+								left: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) / 7.5)",
+								top: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) / 7.5)",
+								width: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 3.2 / 5)",
+								height: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 3.2 / 5)",
 								backgroundColor: "white",
 								zIndex: -1,
 							}}
 						/>
-						<AiFillLinkedin size='50px' color='#0274b3' />
+						<AiFillLinkedin
+							size='calc(var(--page-font-size) * var(--multiplicateur-icon-font-size))'
+							color='#0274b3'
+						/>
 					</a>
 				</div>
 			</div>

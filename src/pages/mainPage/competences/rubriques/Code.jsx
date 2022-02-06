@@ -4,6 +4,7 @@ import { SiJavascript, SiJava, SiPython, SiHtml5, SiCss3, SiCsharp, SiOcaml } fr
 import useWindowDimensions from "../../../../utils/hooks/useWindowDimensions";
 import ScrollbarComponent from "../../../../utils/hooks/ScrollbarComponent";
 import { useTranslation } from "react-i18next";
+import { espace } from "../../../../utils/others/shortcuts";
 
 function Langage({
 	Icon = () => {
@@ -17,6 +18,7 @@ function Langage({
 		<div className='langage-programmation'>
 			<div className='header'>
 				<Icon size='30px' className='image' />
+				{espace}{espace}{espace}
 				<span className='titre'>{titre}</span>
 			</div>
 			<div className='details'>{details}</div>

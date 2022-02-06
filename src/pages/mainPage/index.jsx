@@ -26,7 +26,7 @@ function Home() {
 				buttons={sectionsList.map((section) => t(section.name))}
 				selected={selected}
 				setSelected={setSelected}
-				style={{ marginBottom: "30px" }}
+				style={{ marginBottom: "calc(var(--technique-div-gap-between-techniques) / 2)" }}
 			/>
 			<FadeProps>
 				{selected !== null ? sectionsList[selected].component : <>{t("index_choose_section")}</>}

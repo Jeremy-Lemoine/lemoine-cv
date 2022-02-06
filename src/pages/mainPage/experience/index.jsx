@@ -1,7 +1,7 @@
-import LeftToRightComponents from "../../../utils/components/LeftToRightComponents";
+import { useTranslation } from "react-i18next";
 
 import { banijayLogo, lagardereLogo } from "../../../images";
-import { useTranslation } from "react-i18next";
+import LeftToRightComponents from "../../../utils/components/LeftToRightComponents";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
 
 const StageTemplate = ({ nomEntreprise, dates, duree, logo, listeDeFaits }) => {

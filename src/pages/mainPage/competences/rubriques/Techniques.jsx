@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 function Technique({ Icon, children }) {
 	return (
 		<div className='technique-div'>
-			<Icon className='image' size='30px' />
+			<Icon className='image' size='var(--rubrique-selector-icon-size)' />
 			<div className='content'>{children}</div>
 		</div>
 	);
