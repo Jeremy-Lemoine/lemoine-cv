@@ -71,10 +71,7 @@ ReactDOM.render(
 	rootElement
 );
 
-/* 
-
-TODO: Translations
-	--> Make translations for each text group in the app.
+/*
 
 TODO: Responsive
 	--> Adjust the app for smartphones.

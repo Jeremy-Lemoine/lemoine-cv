@@ -93,6 +93,7 @@ input {
 	}
 	.button-selector {
 		border: none;
+		border-width: 0;
 		outline: none;
 		background-color: var(--dark-gray);
 		color: var(--white);
