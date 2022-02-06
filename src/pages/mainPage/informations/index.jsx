@@ -8,15 +8,10 @@ import { espace, espaceNoSelector } from "../../../utils/others/shortcuts";
 function Informations() {
 	const { t } = useTranslation();
 
-	const {
-		adresse_mail,
-		telephone,
-		adresse_postale,
-		description,
-		copied_mail,
-		copied_telephone,
-		copied_adresse,
-	} = t("informations_page", { returnObjects: true });
+	const { adresse_mail, telephone, adresse_postale, description, copied_mail, copied_telephone, copied_adresse } = t(
+		"informations_page",
+		{ returnObjects: true }
+	);
 
 	return (
 		<div className='informations-container'>
@@ -37,7 +32,7 @@ function Informations() {
 				<br />
 				<br />
 				<br />
-				<p className='left inline' style={{alignItems: "center"}}>
+				<p className='left inline' style={{ alignItems: "center" }}>
 					{adresse_mail}
 					{t("espace_avant_ponctuation")}:{espace}
 					<CopyText className='orange' copiedText={copied_mail}>
