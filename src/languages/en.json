@@ -154,13 +154,8 @@
 			"It's a bit like slippers in the long run."
 		],
 		"musique": {
-			"piano": [
-				"10 years of practice",
-				"Selft-taught"
-			],
-			"guitare": [
-				"A few months of practice"
-			]
+			"piano": ["10 years of practice", "Selft-taught"],
+			"guitare": ["A few months of practice"]
 		}
 	}
 }

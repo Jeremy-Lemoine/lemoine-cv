@@ -154,13 +154,8 @@
 			"C'est un peu comme des chaussons à la longue."
 		],
 		"musique": {
-			"piano": [
-				"10 ans de pratique",
-				"Autodidacte"
-			],
-			"guitare": [
-				"Quelques mois de pratique"
-			]
+			"piano": ["10 ans de pratique", "Autodidacte"],
+			"guitare": ["Quelques mois de pratique"]
 		}
 	}
 }
