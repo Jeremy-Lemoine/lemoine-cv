@@ -157,5 +157,29 @@
 			"piano": ["10 years of practice", "Selft-taught"],
 			"guitare": ["A few months of practice"]
 		}
+	},
+	"contact": {
+		"champ_obligatoire": "This field must be completed.",
+		"sending": "Sending...",
+		"sent": "Successfully sent.",
+		"error": "An error has occured.",
+		"envoyer": "Send",
+		"common": {
+			"nom": "Name",
+			"mail": {
+				"title": "E-Mail",
+				"pattern_error": "The e-mail address format is incorrect."
+			},
+			"message": "Message"
+		},
+		"contact": {
+			"button_text": "Contact me",
+			"modal_header": "Contact me"
+		},
+		"bug": {
+			"button_text": "Report an issue",
+			"modal_header": "Report an issue",
+			"message_placeholder": "Describe the bug and the circumstances in which it occurs."
+		}
 	}
 }

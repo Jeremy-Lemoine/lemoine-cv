@@ -157,5 +157,29 @@
 			"piano": ["10 ans de pratique", "Autodidacte"],
 			"guitare": ["Quelques mois de pratique"]
 		}
+	},
+	"contact": {
+		"champ_obligatoire": "Ce champ est obligatoire.",
+		"sending": "Envoi en cours...",
+		"sent": "Envoyé avec succès.",
+		"error": "Une erreur est survenue.",
+		"envoyer": "Envoyer",
+		"common": {
+			"nom": "Nom",
+			"mail": {
+				"title": "Mail",
+				"pattern_error": "Le format d'adresse mail est incorrect."
+			},
+			"message": "Message"
+		},
+		"contact": {
+			"button_text": "Me contacter",
+			"modal_header": "Me contacter"
+		},
+		"bug": {
+			"button_text": "Signaler un bug",
+			"modal_header": "Signaler un bug",
+			"message_placeholder": "Décrivez le bug et les circonstances dans lesquelles il se produit."
+		}
 	}
 }

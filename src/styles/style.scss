@@ -73,15 +73,19 @@ important-word {
 	display: none;
 }
 
-input {
+input,
+textarea {
+	white-space: pre-wrap;
 	border: none;
 	outline: var(--green-3) solid 1px;
 	background-color: var(--dark-gray);
 	color: var(--white);
 	border-radius: 5px;
 	padding: 8px;
+	@extend .coman-font;
+	font-size: calc(var(--page-font-size) * 0.8);
 	&:focus {
-		outline: var(--green-3) solid 2px;
+		outline-width: 2px;
 	}
 }
 
@@ -528,4 +532,65 @@ button {
 	text-decoration: none;
 	font-weight: bold;
 	cursor: pointer;
+}
+
+.formulaire {
+	text-align: center;
+	.corps {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		margin: 20px;
+		label {
+			padding: 8px;
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
+		}
+		.error {
+			color: red;
+			font-size: calc(var(--page-font-size) * 0.8);
+		}
+	}
+	.submit {
+		margin: 10px;
+	}
+	.invalid {
+		outline-color: red;
+	}
+}
+
+.modal-quit-button {
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	color: var(--white);
+	transition: all ease-in-out 0.2s;
+	border-radius: 5px;
+	font-size: calc(var(--page-font-size) * 1.4);
+	filter: brightness(0.7);
+	cursor: pointer;
+	&:hover {
+		color: rgb(255, 78, 78);
+		background-color: rgb(247, 162, 162);
+		filter: brightness(1);
+	}
+}
+
+.contact-buttons {
+	:not(:first-child) {
+		margin-left: 15px;
+	}
+	> * {
+		appearance: none;
+		color: gray;
+		border: none;
+		background: none;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all ease-in-out 0.15s;
+		&:hover {
+			color: var(--rose-1);
+		}
+	}
 }
