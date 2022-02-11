@@ -35,13 +35,13 @@ class WidthAnimatedTextDiv extends React.Component {
 							},
 							() => {
 								if (this.textRef.current) {
-									this.textRef.current.style.width = `${this.textRef.current.scrollWidth}px`;
-									this.textRef.current.style.paddingLeft = "5px";
-									this.textRef.current.style.paddingRight = "5px";
 									if (this.textInnerRef.current) {
 										this.textInnerRef.current.style.marginLeft = "0";
 										this.textInnerRef.current.style.marginRight = "0";
 									}
+									this.textRef.current.style.width = `${this.textRef.current.scrollWidth}px`;
+									this.textRef.current.style.paddingLeft = "5px";
+									this.textRef.current.style.paddingRight = "5px";
 								}
 							}
 						);
