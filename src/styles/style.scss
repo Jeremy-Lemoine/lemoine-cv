@@ -555,6 +555,15 @@ button {
 	}
 	.submit {
 		margin: 10px;
+		appearance: none;
+		border: none;
+		background: none;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all ease-in-out 0.2s;
+		&:hover {
+			color: var(--orange-2);
+		}
 	}
 	.invalid {
 		outline-color: red;
@@ -590,6 +599,7 @@ button {
 		text-decoration: none;
 		cursor: pointer;
 		transition: all ease-in-out 0.15s;
+		font-size: var(--page-font-size);
 		&:hover {
 			color: var(--rose-1);
 		}

@@ -34,3 +34,6 @@ const updateCSS = (typeScreen) => {
 };
 
 export default updateCSS;
+
+const modal_mult = (isPortrait) => !isPortrait ? 0.2 : 0.7;
+export { modal_mult };

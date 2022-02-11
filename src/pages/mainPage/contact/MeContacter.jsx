@@ -5,6 +5,8 @@ import { send } from "emailjs-com";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
 import ModalContact from "./ModalContact";
 import { useTranslation } from "react-i18next";
+import { useMediaQuery } from "react-responsive";
+import { modal_mult } from "../../../styles/responsive";
 
 export default function MeContacter({ isOpen, setIsOpen }) {
 	const {
@@ -15,6 +17,10 @@ export default function MeContacter({ isOpen, setIsOpen }) {
 	} = useForm();
 
 	const { t } = useTranslation();
+
+	const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+
+	const mult_responsive = modal_mult(isPortrait);
 
 	const {
 		champ_obligatoire: required,
@@ -90,7 +96,7 @@ export default function MeContacter({ isOpen, setIsOpen }) {
 							placeholder={message}
 							className={errors.message && "invalid"}
 							rows={5}
-							style={{ width: winWidth * 0.2 }}
+							style={{ width: winWidth * mult_responsive }}
 						/>
 						<span className='error'>{errors.message && errors.message.message}</span>
 					</div>
