@@ -82,15 +82,15 @@ function Informations() {
 									position: "absolute",
 									left: "calc(var(--page-font-size) * 10 / 17)",
 									top: "calc(var(--page-font-size) * 10 / 17)",
-									width: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 0.7)",
-									height: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 0.7)",
+									width: "calc(var(--page-font-size) * 4 * 0.7)",
+									height: "calc(var(--page-font-size) * 4 * 0.7)",
 									backgroundColor: "white",
 									zIndex: -1,
 								}}
 							/>
 							<AiFillLinkedin
 								style={{
-									fontSize: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size))",
+									fontSize: "calc(var(--page-font-size) * 4)",
 								}}
 								color='#0274b3'
 							/>
@@ -101,9 +101,9 @@ function Informations() {
 								style={{
 									position: "absolute",
 									left: "calc(var(--page-font-size) * 5 / 17)",
-									top: "calc(var(--page-font-size) * 5 / 17)",
-									width: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 0.85)",
-									height: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 0.85)",
+									top: "calc(var(--page-font-size) * 5.3 / 17)",
+									width: "calc(var(--page-font-size) * 4 * 0.86)",
+									height: "calc(var(--page-font-size) * 4 * 0.866)",
 									backgroundColor: "white",
 									borderRadius: "50%",
 									zIndex: -1,
@@ -111,7 +111,7 @@ function Informations() {
 							/>
 							<AiFillGithub
 								style={{
-									fontSize: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size))",
+									fontSize: "calc(var(--page-font-size) * 4)",
 								}}
 								color='black'
 							/>

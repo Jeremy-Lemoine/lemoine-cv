@@ -15,7 +15,6 @@ const css = {
 	"--informations-container-flex-flow": new Field("row", "column"),
 	"--informations-container-text-container-max-width": new Field("40vw", "none"),
 	"--page-font-size": new Field("17px", "21px"),
-	"--multiplicateur-icon-font-size": new Field(4, 16),
 	"--rubrique-selector-icon-size": new Field("30px", "70px"),
 	"--technique-div-gap-between-techniques": new Field("60px", "120px"),
 	"--langage-programmation-padding": new Field("30px", "50px"),

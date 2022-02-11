@@ -75,6 +75,7 @@ important-word {
 
 input,
 textarea {
+	display: fixed;
 	white-space: pre-wrap;
 	border: none;
 	outline: var(--green-3) solid 1px;
