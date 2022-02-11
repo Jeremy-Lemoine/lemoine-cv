@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
+import { AiFillLinkedin, AiOutlineMail, AiFillGithub } from "react-icons/ai";
 
 import { photoPro } from "../../../images";
 import CopyText from "../../../utils/components/CopyText";
@@ -80,10 +80,10 @@ function Informations() {
 								className='background-white'
 								style={{
 									position: "absolute",
-									left: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) / 7.5)",
-									top: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) / 7.5)",
-									width: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 3.2 / 5)",
-									height: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 3.2 / 5)",
+									left: "calc(var(--page-font-size) * 10 / 17)",
+									top: "calc(var(--page-font-size) * 10 / 17)",
+									width: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 0.7)",
+									height: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 0.7)",
 									backgroundColor: "white",
 									zIndex: -1,
 								}}
@@ -93,6 +93,27 @@ function Informations() {
 									fontSize: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size))",
 								}}
 								color='#0274b3'
+							/>
+						</a>
+						<a href='https://github.com/Jeremy-Lemoine' className='icon-link'>
+							<div // To get the "in" as white and not transparent
+								className='background-white'
+								style={{
+									position: "absolute",
+									left: "calc(var(--page-font-size) * 5 / 17)",
+									top: "calc(var(--page-font-size) * 5 / 17)",
+									width: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 0.85)",
+									height: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size) * 0.85)",
+									backgroundColor: "white",
+									borderRadius: "50%",
+									zIndex: -1,
+								}}
+							/>
+							<AiFillGithub
+								style={{
+									fontSize: "calc(var(--page-font-size) * var(--multiplicateur-icon-font-size))",
+								}}
+								color='black'
 							/>
 						</a>
 					</div>
