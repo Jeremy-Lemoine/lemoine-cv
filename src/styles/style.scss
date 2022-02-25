@@ -605,3 +605,14 @@ button {
 		}
 	}
 }
+
+.mobile-coming-soon {
+	position: fixed;
+	bottom: 60px;
+	right: 60px;
+	padding: 20px;
+	border-radius: 8px;
+	border: 2px solid var(--dark-gray);
+	background: rgb(255, 78, 78);
+	z-index: 1;
+}
