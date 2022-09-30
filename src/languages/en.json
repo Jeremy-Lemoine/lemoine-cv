@@ -1,186 +1,195 @@
 {
-	"mobile_coming_soon": "Mobile version is coming soon!",
-	"home_page_name": "CV",
-	"not_found_page_message_before": "This page does not exist. Go watch back the ",
-	"not_found_page_message_after": ".",
-	"formations_name": "Education",
-	"informations_name": "General",
-	"experience_name": "Work Experience",
-	"competences_name": "Skills",
-	"loisirs_name": "Hobbies",
-	"index_choose_section": "Please choose a section.",
-	"header_school": "Second year of general engineering formation at %ecole in software development specialty",
-	"espace_avant_ponctuation": "",
-	"informations_page": {
-		"adresse_mail": "E-mail address",
-		"copied_mail": "E-mail address copied",
-		"telephone": "Phone",
-		"copied_telephone": "Phone number copied",
-		"adresse_postale": "Address",
-		"copied_adresse": "Address copied",
-		"description": [
-			"I am passionate about IT and mathematics. ",
-			"Dynamic, hard-working and very curious, I like to ",
-			"work as a team and I can definitely be an asset."
-		]
-	},
-	"formation_page": {
-		"imt": {
-			"date": "2020 - Today",
-			"link": "https://www.imt-atlantique.fr/en",
-			"lieu": "Nantes - France",
-			"description": ["Msc. in engineering", "Software development specialty"]
-		},
-		"prepa": {
-			"lieu": "Neuilly-Sur-Seine - France",
-			"description": [
-				"Intensive two-year preparatory course for competitive",
-				"entrance exams to the top French engineering schools"
-			]
-		},
-		"lycee": {
-			"titre": "Scientific Baccalauréat Mathematics Speciality\nEuropean Mention\nWith Highest Honour",
-			"lieu": "Verneuil-Sur-Avre - France",
-			"description": [
-				"Scientific Baccalauréat with Mathematics Specialty",
-				"European Mention, obtained with Highest Honour",
-				"at Lycée Porte de Normandie in Verneuil-Sur-Avre, France"
-			]
-		}
-	},
-	"experience_page": {
-		"banijay": {
-			"dates": "June 2021 - July 2021",
-			"liste_de_faits": [
-				"Discovery of network structures",
-				"Technic support and scripts writing (batch, shell, bash)",
-				"Preparing computers for new workers"
-			],
-			"duree": "1 month"
-		},
-		"lagardere": {
-			"liste_de_faits": [
-				"Exploration of the different jobs on the place",
-				"Various maintenance tasks (classifying, Simple models on Excel...)",
-				"Learning and using new tools (Excel, Design and Graphism applications...)"
-			],
-			"duree": "1 week"
-		}
-	},
-	"competences_page": {
-		"code": {
-			"javascript": {
-				"niveau": "Favourite"
-			},
-			"java": {
-				"niveau": "Studied in depth"
-			},
-			"python": {
-				"details": "Tkinter - Imperative / Object oriented - typing Module",
-				"niveau": "The most confident"
-			},
-			"html_css": {
-				"niveau": "Essential"
-			},
-			"ocaml": {
-				"niveau": "Functional language\nInteresting learning"
-			},
-			"scripts": {
-				"niveau": "Great level"
-			},
-			"csharp": {
-				"niveau": "Some foundations"
-			}
-		},
-		"langues": {
-			"fr": {
-				"nom": "French",
-				"niveau": "Native language"
-			},
-			"en": {
-				"nom": "English",
-				"niveau": "B2 Level"
-			},
-			"es": {
-				"nom": "Spanish",
-				"niveau": "A2 Level"
-			},
-			"jap": {
-				"nom": "Japanese",
-				"niveau": "Beginning of learning"
-			}
-		},
-		"techniques": {
-			"excel": "Well mastery of Excel",
-			"informatique": "Rapid adaptation to new digital environments"
-		}
-	},
-	"loisirs_page": {
-		"no_selection_message": [
-			"I am passionate about music, computers, and complex strategic games.",
-			"Click on the icons above to learn more."
-		],
-		"informatique": [
-			"I [regularly] discover [new programming languages] through personal [mini-projects] or for relatives.",
-			"I spend a lot of my free time coding or learning to code."
-		],
-		"jeux_complexes": [
-			"I like games that I consider [complex].",
-			"I have already talked in the previous section about [puzzles], which I see as a complex game where the goal is to find the solution in the most elegant and fastest way possible.",
-			"",
-			"I have been playing [chess] for quite a long time now. It's a game I like very much because it's very deep and there's always more to [learn]. It is also one of the few very old games where human players have outperformed machines for a very long time; it is only very recently with programs like Stockfish, AlphaZero or Leela that the human player has been beaten.",
-			"There is a very important point about the game of chess: the rules have been the same for more than [500 years], and yet the game is still very popular and competitive. That says a lot about the quality of the game.",
-			"",
-			"I am very interested in [Rubik's Cube], and have been for a very long time. I bought a lot of them, each time with a [different shape]: 2x2x2, 3x3x3, 4x4x4, 5x5x5, Mirror 3x3x3, Ghost Cube, Skewb, Skewb ultimate, Gear Cube, Megaminx, Pyraminx, Square One (this is the one that intrigued me the most), 3x3x3 with a special shape like a house or something.",
-			"Over time, I ended up concentrating on the [3x3x3] and solving it in an average of [30 seconds], forgetting some of the other cubes that have become more decoration than anything else.",
-			"",
-			"In terms of video games, I play [League Of Legends], which is the ultimate game for me in terms of [strategy] and complexity. It's a game that requires a lot of [knowledge] if you even want to understand what's going on on the screen when you watch a game. To win in this game, you have to be able to use your knowledge and at the same time have a global understanding of what is going on in the game (this is called [macro]) which requires a lot of concentration and a strong ability to step back."
-		],
-		"mathematiques": [
-			"I have been passionate about [mathematics] since childhood.",
-			"",
-			"It is a field that inspires me and allows me to better understand the world around me.",
-			"JI like to find theorems/conjectures in mathematics that seem either paradoxical, or very [complicated], or absurd or [intriguing].",
-			"",
-			"I am very interested in topology and linear algebra.",
-			"",
-			"",
-			"In that sense, I love [puzzles]. I particularly like, in addition to very [complex] puzzles, two different cases of puzzles: puzzles that look very complex but are actually very simple, and puzzles that are complex but very simple if you look at them from [the right perspective]."
-		],
-		"rollers": [
-			"This sport has given me an incredible feeling of [freedom] for over a year and allows me to decompress.",
-			"I focus more on the [Slalom] aspect than on the long trips and rides throughout the year, although those days are still interesting and fun.",
-			"",
-			"It's more than a sport, it's a [philosophy].",
-			"It's a bit like slippers in the long run."
-		],
-		"musique": {
-			"piano": ["10 years of practice", "Selft-taught"],
-			"guitare": ["A few months of practice"]
-		}
-	},
-	"contact": {
-		"champ_obligatoire": "This field must be completed.",
-		"sending": "Sending...",
-		"sent": "Successfully sent.",
-		"error": "An error has occured.",
-		"envoyer": "Send",
-		"common": {
-			"nom": "Name",
-			"mail": {
-				"title": "E-Mail",
-				"pattern_error": "The e-mail address format is incorrect."
-			},
-			"message": "Message"
-		},
-		"contact": {
-			"button_text": "Contact me",
-			"modal_header": "Contact me"
-		},
-		"bug": {
-			"button_text": "Report an issue",
-			"modal_header": "Report an issue",
-			"message_placeholder": "Describe the bug and the circumstances in which it occurs."
-		}
-	}
+    "mobile_coming_soon": "Mobile version is coming soon!",
+    "home_page_name": "CV",
+    "not_found_page_message_before": "This page does not exist. Go watch back the ",
+    "not_found_page_message_after": ".",
+    "formations_name": "Education",
+    "informations_name": "General",
+    "experience_name": "Work Experience",
+    "competences_name": "Skills",
+    "loisirs_name": "Hobbies",
+    "index_choose_section": "Please choose a section.",
+    "header_school": "Second year of general engineering formation at %ecole in software development specialty",
+    "espace_avant_ponctuation": "",
+    "informations_page": {
+        "adresse_mail": "E-mail address",
+        "copied_mail": "E-mail address copied",
+        "telephone": "Phone",
+        "copied_telephone": "Phone number copied",
+        "adresse_postale": "Address",
+        "copied_adresse": "Address copied",
+        "description": [
+            "I am passionate about IT and mathematics. ",
+            "Dynamic, hard-working and very curious, I like to ",
+            "work as a team and I can definitely be an asset."
+        ]
+    },
+    "formation_page": {
+        "imt": {
+            "date": "2020 - Today",
+            "link": "https://www.imt-atlantique.fr/en",
+            "lieu": "Nantes - France",
+            "description": ["Msc. in engineering", "Software development specialty"]
+        },
+        "prepa": {
+            "lieu": "Neuilly-Sur-Seine - France",
+            "description": [
+                "Intensive two-year preparatory course for competitive",
+                "entrance exams to the top French engineering schools"
+            ]
+        },
+        "lycee": {
+            "titre": "Scientific Baccalauréat Mathematics Speciality\nEuropean Mention\nWith Highest Honour",
+            "lieu": "Verneuil-Sur-Avre - France",
+            "description": [
+                "Scientific Baccalauréat with Mathematics Specialty",
+                "European Mention, obtained with Highest Honour",
+                "at Lycée Porte de Normandie in Verneuil-Sur-Avre, France"
+            ]
+        }
+    },
+    "experience_page": {
+        "banijay": {
+            "dates": "June 2021 - July 2021",
+            "liste_de_faits": [
+                "Discovery of network structures",
+                "Technic support and scripts writing (batch, shell, bash)",
+                "Preparing computers for new workers"
+            ],
+            "duree": "1 month"
+        },
+        "lagardere": {
+            "liste_de_faits": [
+                "Exploration of the different jobs on the place",
+                "Various maintenance tasks (classifying, Simple models on Excel...)",
+                "Learning and using new tools (Excel, Design and Graphism applications...)"
+            ],
+            "duree": "1 week"
+        },
+        "oxyl": {
+            "liste_de_faits": [
+                "Java/JEE/Spring Fullstack team training",
+                "Deepening of Git for teamwork on large projects",
+                "Thinking and development in-house on a big Spring/React project"
+            ],
+            "dates": "June 2022 - August 2022",
+            "duree": "9 weeks"
+        }
+    },
+    "competences_page": {
+        "code": {
+            "javascript": {
+                "niveau": "Favourite"
+            },
+            "java": {
+                "niveau": "Studied in depth"
+            },
+            "python": {
+                "details": "Tkinter - Imperative / Object oriented - typing Module",
+                "niveau": "The most confident"
+            },
+            "html_css": {
+                "niveau": "Essential"
+            },
+            "ocaml": {
+                "niveau": "Functional language\nInteresting learning"
+            },
+            "scripts": {
+                "niveau": "Great level"
+            },
+            "csharp": {
+                "niveau": "Some foundations"
+            }
+        },
+        "langues": {
+            "fr": {
+                "nom": "French",
+                "niveau": "Native language"
+            },
+            "en": {
+                "nom": "English",
+                "niveau": "B2 Level"
+            },
+            "es": {
+                "nom": "Spanish",
+                "niveau": "A2 Level"
+            },
+            "jap": {
+                "nom": "Japanese",
+                "niveau": "Beginning of learning"
+            }
+        },
+        "techniques": {
+            "excel": "Well mastery of Excel",
+            "informatique": "Rapid adaptation to new digital environments"
+        }
+    },
+    "loisirs_page": {
+        "no_selection_message": [
+            "I am passionate about music, computers, and complex strategic games.",
+            "Click on the icons above to learn more."
+        ],
+        "informatique": [
+            "I [regularly] discover [new programming languages] through personal [mini-projects] or for relatives.",
+            "I spend a lot of my free time coding or learning to code."
+        ],
+        "jeux_complexes": [
+            "I like games that I consider [complex].",
+            "I have already talked in the previous section about [puzzles], which I see as a complex game where the goal is to find the solution in the most elegant and fastest way possible.",
+            "",
+            "I have been playing [chess] for quite a long time now. It's a game I like very much because it's very deep and there's always more to [learn]. It is also one of the few very old games where human players have outperformed machines for a very long time; it is only very recently with programs like Stockfish, AlphaZero or Leela that the human player has been beaten.",
+            "There is a very important point about the game of chess: the rules have been the same for more than [500 years], and yet the game is still very popular and competitive. That says a lot about the quality of the game.",
+            "",
+            "I am very interested in [Rubik's Cube], and have been for a very long time. I bought a lot of them, each time with a [different shape]: 2x2x2, 3x3x3, 4x4x4, 5x5x5, Mirror 3x3x3, Ghost Cube, Skewb, Skewb ultimate, Gear Cube, Megaminx, Pyraminx, Square One (this is the one that intrigued me the most), 3x3x3 with a special shape like a house or something.",
+            "Over time, I ended up concentrating on the [3x3x3] and solving it in an average of [30 seconds], forgetting some of the other cubes that have become more decoration than anything else.",
+            "",
+            "In terms of video games, I play [League Of Legends], which is the ultimate game for me in terms of [strategy] and complexity. It's a game that requires a lot of [knowledge] if you even want to understand what's going on on the screen when you watch a game. To win in this game, you have to be able to use your knowledge and at the same time have a global understanding of what is going on in the game (this is called [macro]) which requires a lot of concentration and a strong ability to step back."
+        ],
+        "mathematiques": [
+            "I have been passionate about [mathematics] since childhood.",
+            "",
+            "It is a field that inspires me and allows me to better understand the world around me.",
+            "JI like to find theorems/conjectures in mathematics that seem either paradoxical, or very [complicated], or absurd or [intriguing].",
+            "",
+            "I am very interested in topology and linear algebra.",
+            "",
+            "",
+            "In that sense, I love [puzzles]. I particularly like, in addition to very [complex] puzzles, two different cases of puzzles: puzzles that look very complex but are actually very simple, and puzzles that are complex but very simple if you look at them from [the right perspective]."
+        ],
+        "rollers": [
+            "This sport has given me an incredible feeling of [freedom] for over a year and allows me to decompress.",
+            "I focus more on the [Slalom] aspect than on the long trips and rides throughout the year, although those days are still interesting and fun.",
+            "",
+            "It's more than a sport, it's a [philosophy].",
+            "It's a bit like slippers in the long run."
+        ],
+        "musique": {
+            "piano": ["10 years of practice", "Selft-taught"],
+            "guitare": ["A few months of practice"]
+        }
+    },
+    "contact": {
+        "champ_obligatoire": "This field must be completed.",
+        "sending": "Sending...",
+        "sent": "Successfully sent.",
+        "error": "An error has occured.",
+        "envoyer": "Send",
+        "common": {
+            "nom": "Name",
+            "mail": {
+                "title": "E-Mail",
+                "pattern_error": "The e-mail address format is incorrect."
+            },
+            "message": "Message"
+        },
+        "contact": {
+            "button_text": "Contact me",
+            "modal_header": "Contact me"
+        },
+        "bug": {
+            "button_text": "Report an issue",
+            "modal_header": "Report an issue",
+            "message_placeholder": "Describe the bug and the circumstances in which it occurs."
+        }
+    }
 }

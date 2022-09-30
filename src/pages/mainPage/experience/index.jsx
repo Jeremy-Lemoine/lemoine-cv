@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { banijayLogo, lagardereLogo } from "../../../images";
+import { banijayLogo, lagardereLogo, oxylLogo } from "../../../images";
 import LeftToRightComponents from "../../../utils/components/LeftToRightComponents";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
 
@@ -61,9 +61,26 @@ const StageLagardere = () => {
 	);
 };
 
+const StageOxyl = () => {
+	const { t } = useTranslation();
+
+	const { oxyl } = t("experience_page", { returnObjects: true });
+
+	return (
+		<StageTemplate
+			nomEntreprise='Oxyl'
+			dates={oxyl.dates}
+			listeDeFaits={oxyl.liste_de_faits}
+			duree={oxyl.duree}
+			logo={oxylLogo}
+		/>
+	);
+};
+
 function Experience() {
 	return (
 		<LeftToRightComponents height='50vh' flex={1} durationInMs={350}>
+			<StageOxyl />
 			<StageBanijay />
 			<StageLagardere />
 		</LeftToRightComponents>

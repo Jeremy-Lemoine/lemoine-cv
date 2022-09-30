@@ -1,186 +1,195 @@
 {
-	"mobile_coming_soon": "La version mobile arrive bientôt !",
-	"home_page_name": "CV",
-	"not_found_page_message_before": "Cette page n'existe pas. Retourner voir le ",
-	"not_found_page_message_after": ".",
-	"formations_name": "Formation",
-	"informations_name": "Général",
-	"experience_name": "Expérience",
-	"competences_name": "Compétences",
-	"loisirs_name": "Loisirs",
-	"index_choose_section": "Veuillez choisir une section.",
-	"header_school": "Deuxième année de formation d'ingénieur généraliste à %ecole en spécialité Développement Logiciel",
-	"espace_avant_ponctuation": " ",
-	"informations_page": {
-		"adresse_mail": "Adresse mail",
-		"copied_mail": "Adresse postale copiée",
-		"telephone": "Téléphone",
-		"copied_telephone": "Numéro de téléphone copié",
-		"adresse_postale": "Adresse postale",
-		"copied_adresse": "Adresse mail copiée",
-		"description": [
-			"Je suis passionné par l'informatique et les mathématiques. ",
-			"Dynamique, travailleur et très curieux, j'aime ",
-			"travailler en équipe et je peux vraiment être un atout."
-		]
-	},
-	"formation_page": {
-		"imt": {
-			"date": "2020 - Aujourd'hui",
-			"link": "https://www.imt-atlantique.fr/fr",
-			"lieu": "Nantes",
-			"description": ["École d'ingénieur généraliste", "Spécialité développement logiciel"]
-		},
-		"prepa": {
-			"lieu": "Neuilly-Sur-Seine",
-			"description": [
-				"Classe préparatoire aux grandes écoles pendant",
-				"2 ans au Lycée Paster à Neuilly-Sur-Seine en MP*"
-			]
-		},
-		"lycee": {
-			"titre": "Bac S Euro Spé Maths - Mention Très Bien",
-			"lieu": "Verneuil-Sur-Avre",
-			"description": [
-				"Baccalauréat Scientifique Spécialité Mathématiques",
-				"Mention Européenne obtenu avec Mention Très Bien",
-				"au Lycée Porte de Normandie de Verneuil-Sur-Avre"
-			]
-		}
-	},
-	"experience_page": {
-		"banijay": {
-			"dates": "Juin 2021 - Juillet 2021",
-			"liste_de_faits": [
-				"Découverte des infrastructures réseau",
-				"Support informatique et création de scripts (batch, shell, bash)",
-				"Préparation de postes de travail pour les nouveaux arrivants"
-			],
-			"duree": "1 mois"
-		},
-		"lagardere": {
-			"liste_de_faits": [
-				"Découverte des différents métiers présents sur site",
-				"Tâches variées de maintenance (classement, modèles simples sur Excel...)",
-				"Découverte et utilisation de certains outils (Excel, logiciel de Design et Graphisme...)"
-			],
-			"duree": "1 semaine"
-		}
-	},
-	"competences_page": {
-		"code": {
-			"javascript": {
-				"niveau": "Coup de cœur"
-			},
-			"java": {
-				"niveau": "Étudié en profondeur"
-			},
-			"python": {
-				"details": "Tkinter - Impératif / Orienté Objet - Module typing",
-				"niveau": "Le plus à l'aise"
-			},
-			"html_css": {
-				"niveau": "Indispensable"
-			},
-			"ocaml": {
-				"niveau": "Langage fonctionnel\nApprentissage intéressant"
-			},
-			"scripts": {
-				"niveau": "Bon niveau"
-			},
-			"csharp": {
-				"niveau": "Quelques bases"
-			}
-		},
-		"langues": {
-			"fr": {
-				"nom": "Français",
-				"niveau": "Langue maternelle"
-			},
-			"en": {
-				"nom": "Anglais",
-				"niveau": "Niveau B2"
-			},
-			"es": {
-				"nom": "Espagnol",
-				"niveau": "Niveau A2"
-			},
-			"jap": {
-				"nom": "Japonais",
-				"niveau": "Début d'apprentissage"
-			}
-		},
-		"techniques": {
-			"excel": "Bonne maîtrise d'Excel",
-			"informatique": "Adaptation rapide aux nouveaux environnements informatiques"
-		}
-	},
-	"loisirs_page": {
-		"no_selection_message": [
-			"Je suis un passionné de musique, d'informatique, et des jeux complexes stratégiques.",
-			"Clique sur les icônes ci-dessus pour en savoir plus."
-		],
-		"informatique": [
-			"Je découvre [régulièrement] de [nouveaux langages] de programmation à travers des [miniprojets] personnels ou pour des proches.",
-			"Je passe une grande partie de mon temps libre à coder ou à apprendre à coder."
-		],
-		"jeux_complexes": [
-			"J'aime les jeux que je considère [complexes].",
-			"J'ai déjà parlé dans la section précédente des [énigmes], que je vois comme un jeu complexe où le but est de trouver la solution de la manière la plus élégante et la plus rapide qui soit.",
-			"",
-			"Je joue maintenant depuis assez longtemps aux [échecs]. C'est un jeu que j'aime beaucoup car il est très profond et qu'il y a toujours plus à [apprendre]. C'est par ailleurs un des rares jeux très anciens où les joueurs humains ont pendant très longtemps surpassé les machines ; ce n'est que très récemment avec des programmes comme Stockfish, AlphaZero ou encore Leela que le joueur humain a été battu.",
-			"Il y a un point très important concernant le jeu des échecs : cela fait plus de [500 ans] que les règles du jeu sont les mêmes, et pourtant ce jeu est toujours très populaire et compétitif. Cela en dit très long sur la qualité du jeu.",
-			"",
-			"Je suis très intéressé par les [Rubik's Cube], et ce depuis très longtemps. J'en ai acheté énormément, à chaque fois avec une [forme différente] : 2x2x2, 3x3x3, 4x4x4, 5x5x5, Mirror 3x3x3, Ghost Cube, Skewb, Skewb ultimate, Gear Cube, Megaminx, Pyraminx, Square One (c'est celui qui m'a le plus intrigué), 3x3x3 de forme spéciale comme une maison ou autre.",
-			"Au fil du temps, j'ai fini par me concentrer sur le [3x3x3] pour le résoudre en moyenne en [30 secondes], en oubliant certains des autres cubes qui sont devenus aujourd'hui plus une décoration qu'autre chose.",
-			"",
-			"Au niveau des jeux vidéos, je joue surtout à [League Of Legends], qui est pour moi le jeu par excellence en termes de [stratégie] et de complexité. C'est un jeu qui demande une [connaissance] de celui-ci très poussée si on veut ne serait-ce que comprendre ce qui se passe à l'écran en voyant une partie se dérouler. Pour gagner dans ce jeu, il faut savoir mettre à profit ses connaissances tout en ayant une compréhension globale de ce qui se passe dans la partie (ce qui s'appelle la [macro]) ce qui demande une grande concentration et une forte aptitude de prise de recul."
-		],
-		"mathematiques": [
-			"Je suis passionné de [mathématiques] depuis l'enfance.",
-			"",
-			"C'est un domaine qui m'inspire et me permet de mieux appréhender le monde qui m'entoure.",
-			"J'aime trouver au sein des mathématiques des théorèmes / conjectures qui me paraîssent soit paradoxales, soit très [compliquées], soit absurdes ou [intrigantes].",
-			"",
-			"Je m'intéresse beaucoup à la topologie et à l'algèbre linéaire.",
-			"",
-			"",
-			"En ce sens, j'adore les [énigmes]. J'aime particulièrement, en plus des énigmes très [complexes], deux cas d'énigmes différents : les énigmes qui paraîssent très complexes mais qui sont en fait très simples, et les énigmes qui sont complexes mais très simples si on les prend du [bon point de vue]."
-		],
-		"rollers": [
-			"Ce sport me procure depuis plus d'un an une sensation de [liberté] incroyable et me permet de décompresser.",
-			"Je me concentre surtout sur l'aspect [Slalom] plutôt que sur les longs périples et randonnées organisées tout au long de l'année, même si ces journées restent intéressantes et amusantes.",
-			"",
-			"C'est plus qu'un sport, c'est une [philosophie].",
-			"C'est un peu comme des chaussons à la longue."
-		],
-		"musique": {
-			"piano": ["10 ans de pratique", "Autodidacte"],
-			"guitare": ["Quelques mois de pratique"]
-		}
-	},
-	"contact": {
-		"champ_obligatoire": "Ce champ est obligatoire.",
-		"sending": "Envoi en cours...",
-		"sent": "Envoyé avec succès.",
-		"error": "Une erreur est survenue.",
-		"envoyer": "Envoyer",
-		"common": {
-			"nom": "Nom",
-			"mail": {
-				"title": "Mail",
-				"pattern_error": "Le format d'adresse mail est incorrect."
-			},
-			"message": "Message"
-		},
-		"contact": {
-			"button_text": "Me contacter",
-			"modal_header": "Me contacter"
-		},
-		"bug": {
-			"button_text": "Signaler un bug",
-			"modal_header": "Signaler un bug",
-			"message_placeholder": "Décrivez le bug et les circonstances dans lesquelles il se produit."
-		}
-	}
+    "mobile_coming_soon": "La version mobile arrive bientôt !",
+    "home_page_name": "CV",
+    "not_found_page_message_before": "Cette page n'existe pas. Retourner voir le ",
+    "not_found_page_message_after": ".",
+    "formations_name": "Formation",
+    "informations_name": "Général",
+    "experience_name": "Expérience",
+    "competences_name": "Compétences",
+    "loisirs_name": "Loisirs",
+    "index_choose_section": "Veuillez choisir une section.",
+    "header_school": "Deuxième année de formation d'ingénieur généraliste à %ecole en spécialité Développement Logiciel",
+    "espace_avant_ponctuation": " ",
+    "informations_page": {
+        "adresse_mail": "Adresse mail",
+        "copied_mail": "Adresse postale copiée",
+        "telephone": "Téléphone",
+        "copied_telephone": "Numéro de téléphone copié",
+        "adresse_postale": "Adresse postale",
+        "copied_adresse": "Adresse mail copiée",
+        "description": [
+            "Je suis passionné par l'informatique et les mathématiques. ",
+            "Dynamique, travailleur et très curieux, j'aime ",
+            "travailler en équipe et je peux vraiment être un atout."
+        ]
+    },
+    "formation_page": {
+        "imt": {
+            "date": "2020 - Aujourd'hui",
+            "link": "https://www.imt-atlantique.fr/fr",
+            "lieu": "Nantes",
+            "description": ["École d'ingénieur généraliste", "Spécialité développement logiciel"]
+        },
+        "prepa": {
+            "lieu": "Neuilly-Sur-Seine",
+            "description": [
+                "Classe préparatoire aux grandes écoles pendant",
+                "2 ans au Lycée Paster à Neuilly-Sur-Seine en MP*"
+            ]
+        },
+        "lycee": {
+            "titre": "Bac S Euro Spé Maths - Mention Très Bien",
+            "lieu": "Verneuil-Sur-Avre",
+            "description": [
+                "Baccalauréat Scientifique Spécialité Mathématiques",
+                "Mention Européenne obtenu avec Mention Très Bien",
+                "au Lycée Porte de Normandie de Verneuil-Sur-Avre"
+            ]
+        }
+    },
+    "experience_page": {
+        "banijay": {
+            "dates": "Juin 2021 - Juillet 2021",
+            "liste_de_faits": [
+                "Découverte des infrastructures réseau",
+                "Support informatique et création de scripts (batch, shell, bash)",
+                "Préparation de postes de travail pour les nouveaux arrivants"
+            ],
+            "duree": "1 mois"
+        },
+        "lagardere": {
+            "liste_de_faits": [
+                "Découverte des différents métiers présents sur site",
+                "Tâches variées de maintenance (classement, modèles simples sur Excel...)",
+                "Découverte et utilisation de certains outils (Excel, logiciel de Design et Graphisme...)"
+            ],
+            "duree": "1 semaine"
+        },
+        "oxyl": {
+            "liste_de_faits": [
+                "Formation Java/JEE/Spring Fullstack en équipe",
+                "Approfondissement de Git pour du travail en équipe sur de gros projets",
+                "Réflexion et développement en interne sur un gros projet Spring/React"
+            ],
+            "dates": "Juin 2022 - Août 2022",
+            "duree": "9 semaines"
+        }
+    },
+    "competences_page": {
+        "code": {
+            "javascript": {
+                "niveau": "Coup de cœur"
+            },
+            "java": {
+                "niveau": "Étudié en profondeur"
+            },
+            "python": {
+                "details": "Tkinter - Impératif / Orienté Objet - Module typing",
+                "niveau": "Le plus à l'aise"
+            },
+            "html_css": {
+                "niveau": "Indispensable"
+            },
+            "ocaml": {
+                "niveau": "Langage fonctionnel\nApprentissage intéressant"
+            },
+            "scripts": {
+                "niveau": "Bon niveau"
+            },
+            "csharp": {
+                "niveau": "Quelques bases"
+            }
+        },
+        "langues": {
+            "fr": {
+                "nom": "Français",
+                "niveau": "Langue maternelle"
+            },
+            "en": {
+                "nom": "Anglais",
+                "niveau": "Niveau B2"
+            },
+            "es": {
+                "nom": "Espagnol",
+                "niveau": "Niveau A2"
+            },
+            "jap": {
+                "nom": "Japonais",
+                "niveau": "Début d'apprentissage"
+            }
+        },
+        "techniques": {
+            "excel": "Bonne maîtrise d'Excel",
+            "informatique": "Adaptation rapide aux nouveaux environnements informatiques"
+        }
+    },
+    "loisirs_page": {
+        "no_selection_message": [
+            "Je suis un passionné de musique, d'informatique, et des jeux complexes stratégiques.",
+            "Clique sur les icônes ci-dessus pour en savoir plus."
+        ],
+        "informatique": [
+            "Je découvre [régulièrement] de [nouveaux langages] de programmation à travers des [miniprojets] personnels ou pour des proches.",
+            "Je passe une grande partie de mon temps libre à coder ou à apprendre à coder."
+        ],
+        "jeux_complexes": [
+            "J'aime les jeux que je considère [complexes].",
+            "J'ai déjà parlé dans la section précédente des [énigmes], que je vois comme un jeu complexe où le but est de trouver la solution de la manière la plus élégante et la plus rapide qui soit.",
+            "",
+            "Je joue maintenant depuis assez longtemps aux [échecs]. C'est un jeu que j'aime beaucoup car il est très profond et qu'il y a toujours plus à [apprendre]. C'est par ailleurs un des rares jeux très anciens où les joueurs humains ont pendant très longtemps surpassé les machines ; ce n'est que très récemment avec des programmes comme Stockfish, AlphaZero ou encore Leela que le joueur humain a été battu.",
+            "Il y a un point très important concernant le jeu des échecs : cela fait plus de [500 ans] que les règles du jeu sont les mêmes, et pourtant ce jeu est toujours très populaire et compétitif. Cela en dit très long sur la qualité du jeu.",
+            "",
+            "Je suis très intéressé par les [Rubik's Cube], et ce depuis très longtemps. J'en ai acheté énormément, à chaque fois avec une [forme différente] : 2x2x2, 3x3x3, 4x4x4, 5x5x5, Mirror 3x3x3, Ghost Cube, Skewb, Skewb ultimate, Gear Cube, Megaminx, Pyraminx, Square One (c'est celui qui m'a le plus intrigué), 3x3x3 de forme spéciale comme une maison ou autre.",
+            "Au fil du temps, j'ai fini par me concentrer sur le [3x3x3] pour le résoudre en moyenne en [30 secondes], en oubliant certains des autres cubes qui sont devenus aujourd'hui plus une décoration qu'autre chose.",
+            "",
+            "Au niveau des jeux vidéos, je joue surtout à [League Of Legends], qui est pour moi le jeu par excellence en termes de [stratégie] et de complexité. C'est un jeu qui demande une [connaissance] de celui-ci très poussée si on veut ne serait-ce que comprendre ce qui se passe à l'écran en voyant une partie se dérouler. Pour gagner dans ce jeu, il faut savoir mettre à profit ses connaissances tout en ayant une compréhension globale de ce qui se passe dans la partie (ce qui s'appelle la [macro]) ce qui demande une grande concentration et une forte aptitude de prise de recul."
+        ],
+        "mathematiques": [
+            "Je suis passionné de [mathématiques] depuis l'enfance.",
+            "",
+            "C'est un domaine qui m'inspire et me permet de mieux appréhender le monde qui m'entoure.",
+            "J'aime trouver au sein des mathématiques des théorèmes / conjectures qui me paraîssent soit paradoxales, soit très [compliquées], soit absurdes ou [intrigantes].",
+            "",
+            "Je m'intéresse beaucoup à la topologie et à l'algèbre linéaire.",
+            "",
+            "",
+            "En ce sens, j'adore les [énigmes]. J'aime particulièrement, en plus des énigmes très [complexes], deux cas d'énigmes différents : les énigmes qui paraîssent très complexes mais qui sont en fait très simples, et les énigmes qui sont complexes mais très simples si on les prend du [bon point de vue]."
+        ],
+        "rollers": [
+            "Ce sport me procure depuis plus d'un an une sensation de [liberté] incroyable et me permet de décompresser.",
+            "Je me concentre surtout sur l'aspect [Slalom] plutôt que sur les longs périples et randonnées organisées tout au long de l'année, même si ces journées restent intéressantes et amusantes.",
+            "",
+            "C'est plus qu'un sport, c'est une [philosophie].",
+            "C'est un peu comme des chaussons à la longue."
+        ],
+        "musique": {
+            "piano": ["10 ans de pratique", "Autodidacte"],
+            "guitare": ["Quelques mois de pratique"]
+        }
+    },
+    "contact": {
+        "champ_obligatoire": "Ce champ est obligatoire.",
+        "sending": "Envoi en cours...",
+        "sent": "Envoyé avec succès.",
+        "error": "Une erreur est survenue.",
+        "envoyer": "Envoyer",
+        "common": {
+            "nom": "Nom",
+            "mail": {
+                "title": "Mail",
+                "pattern_error": "Le format d'adresse mail est incorrect."
+            },
+            "message": "Message"
+        },
+        "contact": {
+            "button_text": "Me contacter",
+            "modal_header": "Me contacter"
+        },
+        "bug": {
+            "button_text": "Signaler un bug",
+            "modal_header": "Signaler un bug",
+            "message_placeholder": "Décrivez le bug et les circonstances dans lesquelles il se produit."
+        }
+    }
 }
